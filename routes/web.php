@@ -11,10 +11,9 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'front\HomeController@index')->name('front.home');
 
+Route::post('/','front\HomeController@verify')->name('front.verify');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
