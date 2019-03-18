@@ -16,6 +16,4 @@ class CupDepartamentoCupon extends Model
     {
         return $this->belongsTo(CupDepartamento::class,'dep_id','dep_id');
     }
-
-    
 }

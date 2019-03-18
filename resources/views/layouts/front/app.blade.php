@@ -7,7 +7,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <script type="text/javascript" src="{{ asset('js/library/jquery.js')}}"></script>
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/common.css')}}">
+    <link rel="stylesheet" type="text/css" href="/css/common.css?v={{uniqid()}}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.6/dist/jquery.fancybox.min.css">
   </head>
   <body>

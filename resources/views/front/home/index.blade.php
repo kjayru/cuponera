@@ -34,7 +34,7 @@
                                         {{ session('info')}}
                                     </div>
                                 
-                    @endif
+                        @endif
                       <form class="form" action="{{ route('front.verify') }}" method="POST">
                           @csrf
                         <div class="form__row1">

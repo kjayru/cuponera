@@ -3,6 +3,20 @@
     <li><a href="https://catalogo.claro.com.pe/" target="_blank">Tienda</a></li>
     <li><a href="http://asistencia.claro.com.pe/" target="_blank">Ayuda</a></li>
 </ul>
+@guest
+
+    @else
+<span>  <a class="dropdown-item" href="{{ route('logout') }}"
+       onclick="event.preventDefault();
+         document.getElementById('logout-form').submit();">
+        {{ __('Logout') }}
+    </a></span>
+
+    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+        @csrf
+    </form>
+@endguest
+
 <span><a href="https://www.miclaro.com.pe" target="_blank">Mi Claro</a></span>
 <ul class="movil">
     <li><a class="active" href="http://www.claro.com.pe/personas" target="_blank">Personas</a></li>

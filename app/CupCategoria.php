@@ -10,6 +10,6 @@ class CupCategoria extends Model
 
     public function cupcupones()
     {
-        return $this->hasMany(CupCupon::class);
+        return $this->hasMany(CupCupon::class,'cat_id','cat_id');
     }
 }

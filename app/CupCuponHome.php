@@ -8,7 +8,7 @@ class CupCuponHome extends Model
 {
     protected $table = "cup_cupones_home";
 
-    public function cupcupones(){
-        return $this->belongsTo(CupCupon::class);
+    public function cupcupon(){
+        return $this->belongsTo(CupCupon::class,'cup_id','cup_id');
     }
 }

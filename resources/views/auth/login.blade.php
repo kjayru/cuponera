@@ -1,73 +1,99 @@
-@extends('layouts.app')
-
+@extends('layouts.front.app')
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Login') }}</div>
 
-                <div class="card-body">
-                    <form method="POST" action="{{ route('login') }}">
+<div class="layout" id="app">
+        <div class="layout__header">
+          <div class="section1">
+            <div class="section1__align">
+              <div class="section1__header">
+                <div class="navigation">
+                  <ul>
+                    <li> <a href="#">Inicio</a></li>
+                    <li>/</li>
+                    <li>Cuponera</li>
+                  </ul>
+                </div>
+                <div class="sesion">
+                  <button class="new">Lo más nuevo</button>
+                  <button class="exit">Salir</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="layout__main">
+          <div class="page1">
+            <div class="page1__header">
+              <section class="section1">
+                <div class="section1__align">
+                  <div class="section1__header">
+                    <div class="login">
+                        @if(session('info'))
+
+                            <div class="alert alert-success">
+                                {{ session('info')}}
+                            </div>
+
+                        @endif
+                    <form class="form" method="POST" action="{{ route('claro_auth') }}">
                         @csrf
-
-                        <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required autofocus>
-
-                                @if ($errors->has('email'))
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('email') }}</strong>
-                                    </span>
+                        <div class="form__row1">
+                            <div class="form__info">
+                                <h3>
+                                    Bienvenido a <strong>Cuponera <span>Claro</span></strong></h3>
+                                <p>Ingresa a nuestra cuponera virtual y disfruta <br/>de grandes descuentos</p>
+                            </div>
+                        </div>
+                        <div class="form__row2">
+                        <div class="form__fields">
+                            <dl class="{{ $errors->has('user_ndoc') ? ' is-invalid' : '' }}">
+                                <dt>
+                                    <label class="form__label1">Número de DNI</label>
+                                    <input class="form__text1" type="text" name="user_ndoc" required value="{{ old('user_ndoc') }}"/>
+                                </dt>
+                                @if ($errors->has('user_ndoc'))
+                                <dd><span class="error">{{ $errors->first('user_ndoc') }}</span></dd>
                                 @endif
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
-
-                                @if ($errors->has('password'))
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('password') }}</strong>
-                                    </span>
+                            </dl>
+                            <dl class="{{ $errors->has('departamento') ? ' is-invalid' : '' }}">
+                                <dt>
+                                    <select class="form__select1" name="departamento" required>
+                                        <option value="">Departamento de residencia</option>
+                                        @foreach($departamentos as $depa)
+                                            <option value="{{ $depa->dep_id }}">{{ $depa->dep_nombre}}</option>
+                                        @endforeach
+                                    </select>
+                                </dt>
+                                @if ($errors->has('departamento'))
+                                <dd><span class="error">{{ $errors->first('departamento') }}</span></dd>
                                 @endif
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <div class="col-md-6 offset-md-4">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
-
-                                    <label class="form-check-label" for="remember">
-                                        {{ __('Remember Me') }}
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="form-group row mb-0">
-                            <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Login') }}
-                                </button>
-
-                                @if (Route::has('password.request'))
-                                    <a class="btn btn-link" href="{{ route('password.request') }}">
-                                        {{ __('Forgot Your Password?') }}
-                                    </a>
+                            </dl> 
+                            <dl class="row1">
+                                <dt>    
+                                    <label class="form__label1">No soy un robot <span>{{ captcha_img()  }}</span></label>
+                                    <input class="form__text1" type="text" name="captcha" />
+                                </dt>
+                                @if ($errors->has('captcha'))
+                                <dd><span  class="error">{{ $errors->first('captcha') }}</span></dd>
                                 @endif
+                            </dl>
+                        </div>
+                        </div>
+                        <div class="form__row3">
+                            <div class="form__buttons">
+                                <button class="button1" type="submit">Enviar</button>
                             </div>
                         </div>
+
                     </form>
+               
+               
                 </div>
             </div>
-        </div>
+          </div>
+        </section>
+      </div>
     </div>
+  </div>
 </div>
 @endsection

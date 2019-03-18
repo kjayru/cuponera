@@ -13,7 +13,13 @@
 
 Route::get('/', 'front\HomeController@index')->name('front.home');
 
+Route::post('login/verify', 'Auth\LoginController@verify')->name('claro_auth');
+Route::get('/cupones', 'front\HomeController@cupones')->name('front.cupones');
+Route::get('/cupones/{categoria}', 'front\HomeController@categorias')->name('front.categoria');
+Route::get('/cupones/{categoria}/{id}/{slug}','front\HomeController@detalle')->name('front.detalle');
+Route::get('/salir', 'front\HomeController@salir')->name('front.salir');
+
+
 Route::post('/','front\HomeController@verify')->name('front.verify');
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');

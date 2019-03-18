@@ -9,18 +9,18 @@ class CupCupon extends Model
     protected $table = 'cup_cupones';
 
     public function cupempresa(){
-        return $this->belongsTo(CupEmpresa::class);
+        return $this->belongsTo(CupEmpresa::class,'emp_id','emp_id');
     }
 
     public function cupcategoria(){
-        return $this->belongsTo(CupCategoria::class);
+        return $this->belongsTo(CupCategoria::class,'cat_id','cat_id');
     }
     public function cupdepartamento(){
         return $this->belongsTo(CupDepartamento::class);
     }
 
-    public function cupcuponhomes(){
-        return $this->hasMany(CupCuponHome::class);
+    public function cupcuponhome(){
+        return $this->hasOne(CupCuponHome::class);
     }
 
     public function cupdepartamentocupones(){
