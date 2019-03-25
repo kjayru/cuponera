@@ -46,6 +46,18 @@
                         </div>
                         <div class="form__row2">
                         <div class="form__fields">
+                            <dl>
+                                <dt>
+                                    <select class="form__select1">
+                                        <option value="">Tipo de documento</option>
+                                        <option value="DNI">DNI</option>
+                                        <option value="RUC">RUC</option>
+                                        <option value="PASAPORTE">PASAPORTE</option>
+                                        <option value="CE">CE</option>
+                                    </select>
+                                </dt>
+                                <dd><span class="error">error</span></dd>
+                            </dl>
                             <dl class="{{ $errors->has('user_ndoc') ? ' is-invalid' : '' }}">
                                 <dt>
                                     <label class="form__label1">Número de DNI</label>

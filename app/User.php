@@ -27,4 +27,9 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+
+    public function cupusuario(){
+        return $this->hasOne(CupUsuario::class,'user_ndoc','user_ndoc');
+    }
 }

@@ -31,7 +31,7 @@ class CupCupon extends Model
         return $this->hasMany(CupImagenCupon::class);
     }
 
-    public function cupsegmentocupones(){
-        return $this->hasMany(CupSegmentoCupon::class);
+    public function cupsegmentocupon(){
+        return $this->hasOne(CupSegmentoCupon::class,'cup_id','cup_id');
     }
 }

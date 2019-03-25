@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class CupCategoria extends Model
 {
-    protected $table = 'Cup_Categorias';
+    protected $table = 'cup_categorias';
 
     public function cupcupones()
     {
