@@ -100,6 +100,7 @@ class LoginController extends Controller
         if($success === true) {
             \DB::commit();
             auth()->loginUsingId($user->id);
+            
             return redirect(route('front.cupones'))->withInput($request->all);
         }
 

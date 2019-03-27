@@ -7,7 +7,7 @@
             <div class="list" id="list3">
 
                 @foreach($categorias as $k => $cat)
-
+                    @if($k>1 && $k<9)
                     <a class="list__item type1" href="/cupones/{{ $cat->cat_alias }}">
                     <div class="category">
                        <figure><img src="/assets/pg1_categoria{{$k+1}}.svg" alt=""/></figure>
@@ -18,6 +18,7 @@
                         <p>{{ $cat->cat_nombre }}</p>
                     </figcaption>
                     </a>
+                    @endif
                 @endforeach
 
 

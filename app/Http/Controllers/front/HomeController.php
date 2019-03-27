@@ -40,7 +40,8 @@ class HomeController extends Controller
     
 
     public function cupones(Request $request){
-
+       
+      
         if(!$request->session()->get('user_ndoc')) {
             $request->session()->put('user_ndoc', old('user_ndoc'));
             $request->session()->put('departamento', old('departamento'));
@@ -51,25 +52,18 @@ class HomeController extends Controller
         $dpto = $request->session()->get('departamento');
 
         $usuario = CupUsuario::where('user_ndoc',$ndoc)->first();
-
+        
         $segmento = $usuario->cupsegmento->seg_id;
 
 
-
-
-
-            //$cupones = CupSegmentoCupon::where('seg_id',$segmento)->OrderBy('sc_orden','desc')->get();
-
-           /* foreach($cupons as $k => $cupon){
-                if(!empty($cupon->cupcupon->dep_id)) {
-                    if ($cupon->cupcupon->dep_id == $dpto) {
-                        $cupones[] = $cupon->cupcupon;
-                    }
-                }
+        $i = $request->session()->get('conteo');
+       
+        if(!empty($request->session()->get('url')['intended'])){ 
+            if(empty($i)){
+              $request->session()->put('conteo', "1");
+              return redirect($request->session()->get('url')['intended']);
             }
-
-
-           dd($cupones);*/
+        }
 
             $cupones = CupSegmentoCupon::where('seg_id',$segmento)->OrderBy('sc_orden','desc')->limit(30)->get();
 
@@ -128,9 +122,16 @@ class HomeController extends Controller
 
 
     public function detalle($categoria,$id,$slug){
+        
+        $ndoc = session()->get('user_ndoc');
+
+        $usuario = CupUsuario::where('user_ndoc',$ndoc)->first();
+        $segmento = $usuario->cupsegmento->seg_id;
 
         $cupon = CupCupon::where('cup_id',$id)->first();
-        return view('front.cupones.detalle',['cupon'=>$cupon,'categoria'=>$categoria]);
+        $recomendados = CupSegmentoCupon::where('seg_id',$segmento)->inRandomOrder()->limit(30)->get();
+
+        return view('front.cupones.detalle',['cupon'=>$cupon,'categoria'=>$categoria,'recomendados'=>$recomendados]);
     }
 
 

@@ -15,10 +15,21 @@
                             <li>{{ \Illuminate\Support\Str::title($cupon->cupempresa->emp_nombre) }}</li>
                         </ul>
                     </div>
-                    <!-- <div class="sesion">
-                         <button class="new">Lo más nuevo</button>
-                         button.exit Salir
-                    </div>-->
+                    @guest
+                    @else
+                    <div class="sesion">
+                       
+                      <button class="exit" 
+                         onclick="event.preventDefault();
+                             document.getElementById('logout-form').submit();">
+                         {{ __('Logout') }}
+                    </button>
+                 
+                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                         @csrf
+                     </form>
+                    </div>
+                 @endguest
                 </div>
             </div>
         </div>
@@ -36,9 +47,9 @@
                                     <div class="image"><img src="{{ $cupon->cup_imagen }}" alt=""/></div>
                                     <div class="info">
                                         <h3>{{ $cupon->cup_titulo }}</h3>
-                                        <h4>{{ $cupon->descripcion_corta }}</h4><br/>
+                                        <h4>{{ $cupon->cup_descripcion_corta }}</h4><br/>
                                         <p>
-                                            {!! $cupon->descripcion_larga !!}
+                                            {!! $cupon->cup_descripcion_larga !!}
                                             </p><br/>
                                         <h5>{{ $cupon->cupempresa->emp_nombre }}</h5>
                                         <p>{!! $cupon->cupempresa->emp_direccion !!} <br/>{{ $cupon->cupempresa->emp_telefono }}<br/>
@@ -71,82 +82,29 @@
                             </div>
                             <div class="info">
                                 <div class="info__list" id="list2">
-                                    <div class="element"><a href="#">
-                                            <div class="element__image">
-                                                <div class="logo"><img src="/assets/pg1_ima1.png" alt=""/></div><img src="assets/pg1_ima5.png" alt=""/>
-                                                <div class="content">
-                                                    <figure><img src="/assets/pg1_ico_comida.svg" alt=""/></figure>
-                                                    <figcaption>
-                                                        <p>S/ 24.90</p>
-                                                    </figcaption>
+                                    @foreach($recomendados as $reco)
+                                    @if(!empty($reco->cupcupon->cupcategoria) && $reco->cupcupon->cup_estado==1)
+
+                                        <div class="element"><a href="/cupones/{{$reco->cupcupon->cupcategoria->cat_alias}}/{{$reco->cupcupon->cup_id}}/{{ \Illuminate\Support\Str::slug($reco->cupcupon->cup_titulo, '-') }}">
+                                                <div class="element__image">
+                                                    <div class="logo"><img src="{{@$reco->cupcupon->cupempresa->emp_logo}}" alt=""/></div>
+                                                    <img src="{{ $reco->cupcupon->cup_imagen }}" alt=""/>
+                                                    <div class="content">
+                                                        <figure><img src="assets/pg1_ico_comida.svg" alt=""/></figure>
+                                                        <figcaption>
+                                                            <p> {{ $reco->cupcupon->cup_titulo }}</p>
+                                                        </figcaption>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="element__info">
-                                                <div class="content">
-                                                    <p> <strong>Combo Claro Dúo </strong><br/>a S/. 24.90		</p>
-                                                </div>
-                                            </div></a></div>
-                                    <div class="element"><a href="#">
-                                            <div class="element__image">
-                                                <div class="logo"><img src="/assets/pg1_ima1.png" alt=""/></div><img src="assets/pg1_ima6.png" alt=""/>
-                                                <div class="content">
-                                                    <figure><img src="/assets/pg1_ico_restaurante.svg" alt=""/></figure>
-                                                    <figcaption>
-                                                        <p>-40%</p>
-                                                    </figcaption>
-                                                </div>
-                                            </div>
-                                            <div class="element__info">
-                                                <div class="content">
-                                                    <p> <strong>40% Descuento </strong>en programas</p>
-                                                </div>
-                                            </div></a></div>
-                                    <div class="element"><a href="#">
-                                            <div class="element__image">
-                                                <div class="logo"><img src="/assets/pg1_ima1.png" alt=""/></div><img src="assets/pg1_ima8.png" alt=""/>
-                                                <div class="content">
-                                                    <figure><img src="/assets/pg1_ico_ropa.svg" alt=""/></figure>
-                                                    <figcaption>
-                                                        <p>-20%</p>
-                                                    </figcaption>
-                                                </div>
-                                            </div>
-                                            <div class="element__info">
-                                                <div class="content">
-                                                    <p> <strong>20% dscto. </strong>en escalada de prueba</p>
-                                                </div>
-                                            </div></a></div>
-                                    <div class="element"><a href="#">
-                                            <div class="element__image">
-                                                <div class="logo"><img src="/assets/pg1_ima1.png" alt=""/></div><img src="assets/pg1_ima5.png" alt=""/>
-                                                <div class="content">
-                                                    <figure><img src="/assets/pg1_ico_comida.svg" alt=""/></figure>
-                                                    <figcaption>
-                                                        <p>S/ 24.90</p>
-                                                    </figcaption>
-                                                </div>
-                                            </div>
-                                            <div class="element__info">
-                                                <div class="content">
-                                                    <p> <strong>Combo Claro Dúo </strong><br/>a S/. 24.90		</p>
-                                                </div>
-                                            </div></a></div>
-                                    <div class="element"><a href="#">
-                                            <div class="element__image">
-                                                <div class="logo"><img src="/assets/pg1_ima1.png" alt=""/></div><img src="assets/pg1_ima6.png" alt=""/>
-                                                <div class="content">
-                                                    <figure><img src="/assets/pg1_ico_restaurante.svg" alt=""/></figure>
-                                                    <figcaption>
-                                                        <p>-40%</p>
-                                                    </figcaption>
-                                                </div>
-                                            </div>
-                                            <div class="element__info">
-                                                <div class="content">
-                                                    <p> <strong>40% Descuento </strong>en programas</p>
-                                                </div>
-                                            </div></a></div>
-                                    <div class="element"><a href="#">
+                                                <div class="element__info">
+                                                    <div class="content">
+                                                        
+                                                    </div>
+                                                </div></a>
+                                        </div>
+
+                                    @endif
+                                @endforeach
                                             <div class="element__image">
                                                 <div class="logo"><img src="/assets/pg1_ima1.png" alt=""/></div><img src="assets/pg1_ima8.png" alt=""/>
                                                 <div class="content">

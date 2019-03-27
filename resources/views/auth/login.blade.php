@@ -7,16 +7,9 @@
             <div class="section1__align">
               <div class="section1__header">
                 <div class="navigation">
-                  <ul>
-                    <li> <a href="#">Inicio</a></li>
-                    <li>/</li>
-                    <li>Cuponera</li>
-                  </ul>
+                  
                 </div>
-                <div class="sesion">
-                  <button class="new">Lo más nuevo</button>
-                  <button class="exit">Salir</button>
-                </div>
+                
               </div>
             </div>
           </div>

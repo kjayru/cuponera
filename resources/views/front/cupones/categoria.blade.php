@@ -13,7 +13,21 @@
 
                         </ul>
                     </div>
-
+                    @guest
+                    @else
+                    <div class="sesion">
+                       
+                      <button class="exit" 
+                         onclick="event.preventDefault();
+                             document.getElementById('logout-form').submit();">
+                         {{ __('Logout') }}
+                    </button>
+                 
+                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                         @csrf
+                     </form>
+                    </div>
+                 @endguest
                 </div>
             </div>
         </div>
@@ -59,13 +73,13 @@
                                                 <div class="content">
                                                     <figure><img src="/assets/pg1_ico_comida.svg" alt=""/></figure>
                                                     <figcaption>
-                                                        <!-- <p>S/ 24.90</p>-->
+                                                        <p> {{ @$cupon->cup_titulo }}</p>
                                                     </figcaption>
                                                 </div>
                                             </div>
                                             <div class="element__info">
                                                 <div class="content">
-                                                    <p> {{ @$cupon->cup_titulo }}</p>
+                                                   
                                                 </div>
                                             </div></a>
                                     </div>
