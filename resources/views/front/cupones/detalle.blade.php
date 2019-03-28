@@ -41,7 +41,7 @@
                     <div class="section1__align">
                         <div class="section1__main">
 
-                            <div class="links"><a href="{{ url()->previous() }}">< Volver</a></div>
+                           <!-- <div class="links"><a href="{{ url()->previous() }}">< Volver</a></div>-->
                             <div class="content">
                                 <div class="content__header">
                                     <div class="image"><img src="{{ $cupon->cup_imagen }}" alt=""/></div>
