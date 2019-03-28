@@ -1,0 +1,30 @@
+
+                <div class="info">
+                    <div class="info__list" id="list2">
+                        @foreach($recomendados as $k => $reco)
+                          
+                            @if(!empty($reco->cupcupon->cupcategoria) && $reco->cupcupon->cup_estado==1)
+                               
+                                <div class="element"><a href="/cupones/{{$reco->cupcupon->cupcategoria->cat_alias}}/{{$reco->cupcupon->cup_id}}/{{ \Illuminate\Support\Str::slug($reco->cupcupon->cup_titulo, '-') }}">
+                                        <div class="element__image">
+                                            <div class="logo"><img src="{{@$reco->cupcupon->cupempresa->emp_logo}}" alt=""/></div>
+                                            <img src="{{ $reco->cupcupon->cup_imagen }}" alt=""/>
+                                            <div class="content">
+                                                <figure><img src="assets/pg1_ico_comida.svg" alt=""/></figure>
+                                                <figcaption>
+                                                    <p> {{ $reco->cupcupon->cup_titulo }}</p>
+                                                </figcaption>
+                                            </div>
+                                        </div>
+                                        <div class="element__info">
+                                            <div class="content">
+                                                
+                                            </div>
+                                        </div></a>
+                                </div>
+                               
+                            @endif
+                        @endforeach
+                    </div>
+                </div>
+          

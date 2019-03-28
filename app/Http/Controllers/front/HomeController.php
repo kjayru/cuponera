@@ -65,9 +65,9 @@ class HomeController extends Controller
             }
         }
 
-            $cupones = CupSegmentoCupon::where('seg_id',$segmento)->OrderBy('sc_orden','desc')->limit(30)->get();
-
-            $recomendados = CupSegmentoCupon::where('seg_id',$segmento)->inRandomOrder()->limit(30)->get();
+            $cupones = CupSegmentoCupon::where('seg_id',$segmento)->OrderBy('sc_orden','desc')->get();
+          
+            $recomendados = CupCuponHome::OrderBy('ch_orden','asc')->get();
 
             $categorias = CupCategoria::where('cat_estado','1')->OrderBy('cat_orden','asc')->get();
             $departamento = CupDepartamento::where('dep_id',$dpto)->first();
@@ -129,7 +129,8 @@ class HomeController extends Controller
         $segmento = $usuario->cupsegmento->seg_id;
 
         $cupon = CupCupon::where('cup_id',$id)->first();
-        $recomendados = CupSegmentoCupon::where('seg_id',$segmento)->inRandomOrder()->limit(30)->get();
+        //$recomendados = CupSegmentoCupon::where('seg_id',$segmento)->inRandomOrder()->limit(30)->get();
+        $recomendados = CupCuponHome::OrderBy('ch_orden','asc')->get();
 
         return view('front.cupones.detalle',['cupon'=>$cupon,'categoria'=>$categoria,'recomendados'=>$recomendados]);
     }

@@ -57,10 +57,13 @@
                             </div>
                             <div class="info">
                                 <div class="info__list" id="list1">
+                                        @php $i = 0; @endphp
                                  @foreach($cupones as $cup)
 
                                     @if(!empty($cup->cupcupon->cupcategoria) && $cup->cupcupon->cup_estado==1)
-
+                                   
+                                    @if($i<6)
+                                        
                                         <div class="element">
                                             <a href="/cupones/{{@$cup->cupcupon->cupcategoria->cat_alias}}/{{@$cup->cupcupon->cup_id}}/{{ \Illuminate\Support\Str::slug($cup->cupcupon->cup_titulo, '-') }}">
                                                 <div class="element__image">
@@ -79,8 +82,11 @@
                                                     </div>
                                                 </div></a>
                                         </div>
-
+                                        
+                                        @endif
+                                        @php $i++; @endphp
                                     @endif
+                                   
                                  @endforeach
 
 
@@ -92,42 +98,18 @@
                         </div>
                     </div>
                 </section>
+
                 <section class="section3">
-                    <div class="section3__align">
-                        <div class="section3__main">
-                            <div class="title">
-                                <h3>Recomendados para ti</h3>
-                            </div>
-                            <div class="info">
-                                <div class="info__list" id="list2">
-                                    @foreach($recomendados as $reco)
-                                        @if(!empty($reco->cupcupon->cupcategoria) && $reco->cupcupon->cup_estado==1)
-
-                                            <div class="element"><a href="/cupones/{{$reco->cupcupon->cupcategoria->cat_alias}}/{{$reco->cupcupon->cup_id}}/{{ \Illuminate\Support\Str::slug($reco->cupcupon->cup_titulo, '-') }}">
-                                                    <div class="element__image">
-                                                        <div class="logo"><img src="{{@$reco->cupcupon->cupempresa->emp_logo}}" alt=""/></div>
-                                                        <img src="{{ $reco->cupcupon->cup_imagen }}" alt=""/>
-                                                        <div class="content">
-                                                            <figure><img src="assets/pg1_ico_comida.svg" alt=""/></figure>
-                                                            <figcaption>
-                                                                <p> {{ $reco->cupcupon->cup_titulo }}</p>
-                                                            </figcaption>
-                                                        </div>
-                                                    </div>
-                                                    <div class="element__info">
-                                                        <div class="content">
-                                                            
-                                                        </div>
-                                                    </div></a>
-                                            </div>
-
-                                        @endif
-                                    @endforeach
+                        <div class="section3__align">
+                            <div class="section3__main">
+                                <div class="title">
+                                    <h3>Recomendados para ti</h3>
                                 </div>
+                                @include('layouts.front.partials.recomendado')
                             </div>
                         </div>
-                    </div>
-                </section>
+                    </section>
+               
             </div>
         </div>
     </div>

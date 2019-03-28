@@ -78,13 +78,13 @@
                                                         <div class="content">
                                                             <figure><img src="/assets/pg1_ico_comida.svg" alt=""/></figure>
                                                             <figcaption>
-                                                                <!-- <p>S/ 24.90</p>-->
+                                                                    <p> {{ @$cupon->cup_titulo }}</p>
                                                             </figcaption>
                                                         </div>
                                                     </div>
                                                     <div class="element__info">
                                                         <div class="content">
-                                                            <p> {{ @$cupon->cup_titulo }}</p>
+                                                           
                                                         </div>
                                                     </div></a>
                                             </div>
