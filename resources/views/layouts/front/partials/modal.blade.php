@@ -35,7 +35,7 @@
                                                 <!--li.usetype Huánuco-->
                                             </ul>
                                         </div>
-                                        <div class="link"><a href="#">Guardar</a></div>
+                                       <!-- <div class="link"><a href="#">Guardar</a></div>-->
                                     </div>
                                 </div>
                             </div>
