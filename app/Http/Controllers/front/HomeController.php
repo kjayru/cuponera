@@ -140,8 +140,10 @@ class HomeController extends Controller
 
         $categorias = CupCategoria::where('cat_estado','1')->OrderBy('cat_orden','asc')->get();
 
-        $cupons = CupCupon::where('cup_titulo','like','%'.$request->search.'%')->get();
-        $resultados = CupCupon::where('cup_titulo','like','%'.$request->search.'%')->count();
+        $cupons = CupCupon::where('cup_titulo','like','%'.$request->search.'%')
+                            ->orWhere('cup_descripcion_larga','like','%'.$request->search.'%')->get();
+
+        $resultados = count($cupons);
 
         return view('front.cupones.buscar',['cupones'=>$cupons,'categorias'=>$categorias,'resultados'=>$resultados]);
     }
