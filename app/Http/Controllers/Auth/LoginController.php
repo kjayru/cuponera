@@ -92,7 +92,7 @@ class LoginController extends Controller
 
             } catch (\Exception $exception) {
                 $success = $exception->getMessage();
-                echo $success;
+                
                 \DB::rollBack();
             }
         }
