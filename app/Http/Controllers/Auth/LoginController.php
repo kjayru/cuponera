@@ -61,7 +61,7 @@ class LoginController extends Controller
     {
 
         $rules = ['captcha' => 'required|captcha',
-            'user_ndoc' => 'required|integer',
+            'user_ndoc' => 'required|string',
             'departamento' => 'required|string'];
 
         $validator = Validator::make($request->all(), $rules);
