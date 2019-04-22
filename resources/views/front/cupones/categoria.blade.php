@@ -71,7 +71,33 @@
                                                 <div class="logo"><img src="{{@$cupon->cupempresa->emp_logo}}" alt=""/></div>
                                                 <img src="{{ @$cupon->cup_imagen }}" alt=""/>
                                                 <div class="content">
-                                                    <figure><img src="/assets/pg1_ico_comida.svg" alt=""/></figure>
+                                                        @switch($cupon->cupcategoria->cat_id)
+                                                            @case(3)
+                                                            <figure><img src="assets/pg1_categoria6_off.svg" alt=""/></figure>
+                                                            @break
+                                                    
+                                                            @case(5)
+                                                                <figure><img src="assets/pg1_categoria3_off.svg" alt=""/></figure>
+                                                            @break
+                                                            @case(1)
+                                                                <figure><img src="assets/pg1_categoria4_off.svg" alt=""/></figure>
+                                                            @break
+                                                            @case(9)
+                                                                <figure><img src="assets/pg1_categoria10_off.svg" alt=""/></figure>
+                                                            @break
+                                                            @case(4)
+                                                                <figure><img src="assets/pg1_categoria8_off.svg" alt=""/></figure>
+                                                            @break
+                                                            @case(6)
+                                                                <figure><img src="assets/pg1_categoria7_off.svg" alt=""/></figure>
+                                                            @break
+                                                            @case(7)
+                                                                <figure><img src="assets/pg1_categoria5_off.svg" alt=""/></figure>
+                                                            @break
+                                                            @case(2)
+                                                                <figure><img src="assets/pg1_categoria9_off.svg" alt=""/></figure>
+                                                            @break
+                                                    @endswitch
                                                     <figcaption>
                                                         <p> {{ @$cupon->cup_titulo }}</p>
                                                     </figcaption>
