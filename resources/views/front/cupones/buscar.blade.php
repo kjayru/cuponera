@@ -76,7 +76,7 @@
                                                         <div class="logo"><img src="{{@$cupon->cupempresa->emp_logo}}" alt=""/></div>
                                                         <img src="{{ @$cupon->cup_imagen }}" alt=""/>
                                                         <div class="content">
-                                                            <figure><img src="/assets/pg1_ico_comida.svg" alt=""/></figure>
+                                                            
 
                                                             @switch($cupon->cupcategoria->cat_id)
                                                                 @case(3)
