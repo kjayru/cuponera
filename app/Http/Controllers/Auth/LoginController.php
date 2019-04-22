@@ -59,13 +59,13 @@ class LoginController extends Controller
 
     protected function verify(Request $request)
     {
-
+        
         $rules = ['captcha' => 'required|captcha',
-            'user_ndoc' => 'required|integer',
+            'user_ndoc' => 'required|string',
             'departamento' => 'required|string'];
 
         $validator = Validator::make($request->all(), $rules);
-
+       
         if ($validator->fails())
         {
             return redirect()->route('login')->with('info','Complete los campos correctamente');
@@ -78,7 +78,7 @@ class LoginController extends Controller
 
         $check = User::where('user_ndoc',$cupusuario->user_ndoc)->first();
 
-
+        
         if($check) {
             $user = $check;
         } else {
@@ -87,11 +87,12 @@ class LoginController extends Controller
                 $user = User::create([
                     "name" => $cupusuario->user_nombres,
                     "user_ndoc" => $cupusuario->user_ndoc,
-                    "email" => $cupusuario->user_email
+                    //"email" => $cupusuario->user_email
                 ]);
 
             } catch (\Exception $exception) {
                 $success = $exception->getMessage();
+                echo $success;
                 \DB::rollBack();
             }
         }
