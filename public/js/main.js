@@ -192,7 +192,7 @@ var main = (function(APP, win, $, undefined) {
           },
           {
 
-            breakpoint: 769,
+            breakpoint: 1025,
             settings: {
               variableWidth: true,
               slidesToShow: 1,
