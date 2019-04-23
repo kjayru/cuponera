@@ -13,29 +13,29 @@
                                                     @switch($reco->cupcupon->cupcategoria->cat_id)
                                                  
                                                     @case(3)
-                                                        <figure><img src="assets/pg1_categoria6_off.svg" alt=""/></figure>
+                                                        <figure><img src="/assets/pg1_categoria6_off.svg" alt=""/></figure>
                                                         @break
                                                 
                                                     @case(5)
-                                                        <figure><img src="assets/pg1_categoria3_off.svg" alt=""/></figure>
+                                                        <figure><img src="/assets/pg1_categoria3_off.svg" alt=""/></figure>
                                                     @break
                                                     @case(1)
-                                                        <figure><img src="assets/pg1_categoria4_off.svg" alt=""/></figure>
+                                                        <figure><img src="/assets/pg1_categoria4_off.svg" alt=""/></figure>
                                                     @break
                                                     @case(9)
-                                                        <figure><img src="assets/pg1_categoria10_off.svg" alt=""/></figure>
+                                                        <figure><img src="/assets/pg1_categoria10_off.svg" alt=""/></figure>
                                                     @break
                                                     @case(4)
-                                                        <figure><img src="assets/pg1_categoria8_off.svg" alt=""/></figure>
+                                                        <figure><img src="/assets/pg1_categoria8_off.svg" alt=""/></figure>
                                                     @break
                                                     @case(6)
-                                                        <figure><img src="assets/pg1_categoria7_off.svg" alt=""/></figure>
+                                                        <figure><img src="/assets/pg1_categoria7_off.svg" alt=""/></figure>
                                                     @break
                                                     @case(7)
-                                                        <figure><img src="assets/pg1_categoria5_off.svg" alt=""/></figure>
+                                                        <figure><img src="/assets/pg1_categoria5_off.svg" alt=""/></figure>
                                                     @break
                                                     @case(2)
-                                                        <figure><img src="assets/pg1_categoria9_off.svg" alt=""/></figure>
+                                                        <figure><img src="/assets/pg1_categoria9_off.svg" alt=""/></figure>
                                                     @break
                                                
                                                 @endswitch
