@@ -13,9 +13,9 @@
                                             </div>
 
                                             <div class="content">
-<<<<<<< HEAD
+<!--<<<<<<< HEAD-->
                                                 <figure><img src="assets/pg1_ico_comida_.svg" alt=""/></figure>
-=======
+<!--=======-->
                                                     @switch($reco->cupcupon->cupcategoria->cat_id)
                                                  
                                                     @case(3)
@@ -45,7 +45,8 @@
                                                     @break
                                                
                                                 @endswitch
->>>>>>> 58801d34795aebdca55a379b4f2e59b939f621c4
+                                                <!--
+>>>>>>> 58801d34795aebdca55a379b4f2e59b939f621c4-->
                                                 <figcaption>
                                                     <h4>COMIDA RÁPIDA</h4>
                                                     <h3>Bembos</h3>
