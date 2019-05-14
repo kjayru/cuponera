@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1440px" height="213px" viewBox="0 0 1440 213" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 54.1 (76490) - https://sketchapp.com -->
+    <title>75E43AF4-324F-41B7-878E-718E83C9DBC7</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <radialGradient cx="50.7763006%" cy="66.5051131%" fx="50.7763006%" fy="66.5051131%" r="96.7388904%" gradientTransform="translate(0.507763,0.665051),scale(0.149521,1.000000),rotate(90.000000),scale(1.000000,4.746075),translate(-0.507763,-0.665051)" id="radialGradient-1">
+            <stop stop-color="#ED0000" offset="0%"></stop>
+            <stop stop-color="#AD0002" offset="100%"></stop>
+        </radialGradient>
+    </defs>
+    <g id="Page-5-HOME-APROBADO" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Home_cuponera_02" transform="translate(0.000000, -1649.000000)" fill="url(#radialGradient-1)">
+            <path d="M-32,1643.13677 C-29.7854557,1644.68713 -27.5348511,1646.25318 -25.2481861,1647.83491 C507.18008,1813.43241 1000.60312,1812.04348 1455.02095,1643.66811 C1461.07264,1641.42578 1466.72948,1639.24376 1472,1637.12049 L1472,1862 L-32,1862 L-32,1643.13677 Z" id="Combined-Shape"></path>
+        </g>
+    </g>
+</svg>

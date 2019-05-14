@@ -25,39 +25,9 @@ var main = (function(APP, win, $, undefined) {
 
   var page;
 
+
   let URLactual = window.location.href 
-  
   let  rute = URLactual
-
-  var cat = Array.from(document.querySelectorAll('.layout__main .page2__main .section1__header .list__item figcaption p'))
-  cat.map( el => {
-    if (el.textContent === 'Servicios') {
-        el.style.color = '#53cdf2'
-      } else if (el.textContent === 'Comida Rápida') {
-        el.style.color = '#f5a623'
-
-      } else if (el.textContent === 'Restaurante') {
-        el.style.color = '#7ed321'
-
-      } else if (el.textContent === 'Viajes') {
-        el.style.color = '#e5336a'
-
-      } else if (el.textContent === 'Belleza y Salud') {
-        el.style.color = '#0fd299'
-
-      } else if (el.textContent === 'Ropa y Accesorios') {
-        el.style.color = '#c28aff'
-
-      } else if (el.textContent === 'Detalles y Obsequios') {
-        el.style.color = '#ff79ae'
-
-      } else if (el.textContent === 'Diversión') {
-        el.style.color = '#1d87fa'
-      }   
-  })
-
-
-  
   
 
   if (rute.includes('index') === true ) {
@@ -87,8 +57,37 @@ var main = (function(APP, win, $, undefined) {
   
 
 
+/*
+  var cat = Array.from(document.querySelectorAll('.layout__main .page2__main .section1__header .list__item figcaption p'))
+  cat.map( el => {
 
+  if (el.textContent === 'Servicios') {
+      el.style.color = '#53cdf2'
+    } else if (el.textContent === 'Comida Rápida') {
+      el.style.color = '#f5a623'
 
+    } else if (el.textContent === 'Restaurante') {
+      el.style.color = '#7ed321'
+
+    } else if (el.textContent === 'Viajes') {
+      el.style.color = '#e5336a'
+
+    } else if (el.textContent === 'Belleza y Salud') {
+      el.style.color = '#0fd299'
+
+    } else if (el.textContent === 'Ropa y Accesorios') {
+      el.style.color = '#c28aff'
+
+    } else if (el.textContent === 'Detalles y Obsequios') {
+      el.style.color = '#ff79ae'
+
+    } else if (el.textContent === 'Diversión') {
+      el.style.color = '#1d87fa'
+
+    }
+    
+  })
+  */
 
   var catchDom = function() {
     //dom.questions = Array.apply(null, document.querySelectorAll(st.questions));
@@ -184,13 +183,25 @@ var main = (function(APP, win, $, undefined) {
       dom.slick2 = $(st.list2).slick({
         arrows: true,
         dots: true,
-        slidesToShow: 3,
+        slidesToShow: 4,
         infinite: false,
         responsive: [
 
           {
 
             breakpoint: 1025,
+            settings: {
+              slidesToShow: 3,
+              //arrows: true,
+              //dots: false
+              
+            }
+
+          },
+
+          {
+
+            breakpoint: 769,
             settings: {
               slidesToShow: 2,
               //arrows: true,
@@ -199,6 +210,7 @@ var main = (function(APP, win, $, undefined) {
             }
 
           },
+
          
           {
 

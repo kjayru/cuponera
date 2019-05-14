@@ -34,6 +34,7 @@
                 </div>
             </div>
         </div>
+        
         <div class="layout__main">
             <div class="page2">
                 <div class="page2__header">

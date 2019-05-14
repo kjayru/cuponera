@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="29px" height="66px" viewBox="0 0 29 66" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: sketchtool 52.4 (67378) - http://www.bohemiancoding.com/sketch -->
-    <title>4A1DB09C-5F1D-491F-A080-428A55C2EB54</title>
+<svg width="43px" height="43px" viewBox="0 0 43 43" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 54.1 (76490) - https://sketchapp.com -->
+    <title>400676AC-8C14-4C9C-B842-7578DE701A38</title>
     <desc>Created with sketchtool.</desc>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Home_cuponera" transform="translate(-98.000000, -913.000000)" fill="#DA272C">
-            <g id="Group-12-Copy-2" transform="translate(98.000000, 913.000000)">
-                <path d="M3.75802196,32.9982062 L28.5426154,3.19166259 C29.1524615,2.45824713 29.1524615,1.28308804 28.5426154,0.549672582 C27.9333444,-0.183224194 26.9556067,-0.183224194 26.3463357,0.549672582 L0.457061096,31.6847321 C-0.152353699,32.417456 -0.152353699,33.5933067 0.457061096,34.3260305 L26.3463357,65.4469128 C26.6450769,65.8068776 27.0477593,66 27.4385094,66 C27.8294032,66 28.2320856,65.8203634 28.5314019,65.4469128 C29.1406729,64.7141889 29.1406729,63.5383382 28.5314019,62.8056143 L3.75802196,32.9982062 Z" id="Fill-1"></path>
+    <g id="Page-5-HOME-APROBADO" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Home_cuponera_02" transform="translate(-107.000000, -875.000000)">
+            <g id="Group-21-Copy" transform="translate(128.500000, 896.500000) scale(-1, 1) translate(-128.500000, -896.500000) translate(107.000000, 875.000000)">
+                <circle id="Oval-Copy-9" fill="#ECECEC" opacity="0.624395461" transform="translate(21.500000, 21.500000) scale(-1, 1) translate(-21.500000, -21.500000) " cx="21.5" cy="21.5" r="21.5"></circle>
+                <path d="M18.6366735,21.0859317 L27.0209722,11.002774 C27.227275,10.7546693 27.227275,10.3571286 27.0209722,10.1090239 C26.8148639,9.86109461 26.4841082,9.86109461 26.2779999,10.1090239 L17.5200023,20.6416008 C17.3138454,20.8894716 17.3138454,21.2872462 17.5200023,21.535117 L26.2779999,32.0628979 C26.3790601,32.1846693 26.5152822,32.25 26.6474678,32.25 C26.7797019,32.25 26.9159241,32.1892313 27.0171788,32.0628979 C27.2232871,31.8150272 27.2232871,31.4172525 27.0171788,31.1693818 L18.6366735,21.0859317 Z" id="Fill-1-Copy" stroke="#DA272C" stroke-width="2" fill="#DA272C" transform="translate(22.270542, 21.086538) scale(-1, 1) translate(-22.270542, -21.086538) "></path>
             </g>
         </g>
     </g>

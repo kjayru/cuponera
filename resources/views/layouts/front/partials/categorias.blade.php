@@ -2,7 +2,7 @@
     <div class="section1__align">
         <div class="section1__header">
             <div class="title">
-                <h3>Selecciona la categoría de tu interés</h3>
+                <h3>¿Qué vas a disfrutar hoy?</h3>
             </div>
             <div class="list" id="list3">
 

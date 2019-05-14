@@ -7,20 +7,26 @@
                                
                                 <div class="element"><a href="/cupones/{{$reco->cupcupon->cupcategoria->cat_alias}}/{{$reco->cupcupon->cup_id}}/{{ \Illuminate\Support\Str::slug($reco->cupcupon->cup_titulo, '-') }}">
                                         <div class="element__image">
-                                            <div class="logo"><img src="{{@$reco->cupcupon->cupempresa->emp_logo}}" alt=""/></div>
-                                            <img src="{{ $reco->cupcupon->cup_imagen }}" alt=""/>
+                                            <!--<div class="logo"><img src="{{@$reco->cupcupon->cupempresa->emp_logo}}" alt=""/></div>-->
+                                            <div class="image">
+                                                <img src="{{ $reco->cupcupon->cup_imagen }}" alt=""/>
+                                            </div>
+
                                             <div class="content">
-                                                <figure><img src="assets/pg1_ico_comida.svg" alt=""/></figure>
+                                                <figure><img src="assets/pg1_ico_comida_.svg" alt=""/></figure>
                                                 <figcaption>
+                                                    <h4>COMIDA RÁPIDA</h4>
+                                                    <h3>Bembos</h3>
                                                     <p> {{ $reco->cupcupon->cup_titulo }}</p>
                                                 </figcaption>
                                             </div>
                                         </div>
+                                        <!--
                                         <div class="element__info">
                                             <div class="content">
                                                 
                                             </div>
-                                        </div></a>
+                                        </div>--></a>
                                 </div>
                                
                             @endif
