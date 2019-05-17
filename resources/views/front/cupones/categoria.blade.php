@@ -20,7 +20,7 @@
                       <button class="exit" 
                          onclick="event.preventDefault();
                              document.getElementById('logout-form').submit();">
-                         {{ __('Logout') }}
+                         {{ __('Cerrar sesión') }}
                     </button>
                  
                      <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
@@ -57,57 +57,63 @@
                         <div class="section4__main">
                             <div class="title">
                                 <h3> <strong>{{ @$cat_nombre }}</strong></h3>
-                                <h5>Mostrando 1 -  {{  $cupones->count() }} de   {{  $cupones->total() }} resultados</h5>
+                               <!-- <h5>Mostrando 1 -  {{  $cupones->count() }} de   {{  $cupones->total() }} resultados</h5> -->
                             </div>
                             <div class="info">
-                                <div class="info__list">
+                                <div class="info__list" id="list5">
 
-                                   @foreach($cupones as $cupon)
-
-
-
+                                @foreach($cupones as $cupon)
                                     <div class="element"><a href="/cupones/{{$cupon->cupcategoria->cat_alias}}/{{$cupon->cup_id}}/{{ \Illuminate\Support\Str::slug($cupon->cup_titulo, '-') }}">
-                                            <div class="element__image">
-                                                <div class="logo"><img src="{{@$cupon->cupempresa->emp_logo}}" alt=""/></div>
+                                        <div class="element__image">
+                                            <!--<div class="logo"><img src="{{@$cupon->cupempresa->emp_logo}}" alt=""/></div>-->
+
+                                            <div class="image">
                                                 <img src="{{ @$cupon->cup_imagen }}" alt=""/>
-                                                <div class="content">
-                                                        @switch($cupon->cupcategoria->cat_id)
-                                                            @case(3)
-                                                            <figure><img src="/assets/pg1_categoria6_off.svg" alt=""/></figure>
-                                                            @break
-                                                    
-                                                            @case(5)
-                                                                <figure><img src="/assets/pg1_categoria3_off.svg" alt=""/></figure>
-                                                            @break
-                                                            @case(1)
-                                                                <figure><img src="/assets/pg1_categoria4_off.svg" alt=""/></figure>
-                                                            @break
-                                                            @case(9)
-                                                                <figure><img src="/assets/pg1_categoria10_off.svg" alt=""/></figure>
-                                                            @break
-                                                            @case(4)
-                                                                <figure><img src="/assets/pg1_categoria8_off.svg" alt=""/></figure>
-                                                            @break
-                                                            @case(6)
-                                                                <figure><img src="/assets/pg1_categoria7_off.svg" alt=""/></figure>
-                                                            @break
-                                                            @case(7)
-                                                                <figure><img src="/assets/pg1_categoria5_off.svg" alt=""/></figure>
-                                                            @break
-                                                            @case(2)
-                                                                <figure><img src="/assets/pg1_categoria9_off.svg" alt=""/></figure>
-                                                            @break
-                                                    @endswitch
-                                                    <figcaption>
-                                                        <p> {{ @$cupon->cup_titulo }}</p>
-                                                    </figcaption>
-                                                </div>
                                             </div>
-                                            <div class="element__info">
-                                                <div class="content">
-                                                   
-                                                </div>
-                                            </div></a>
+
+                                            <div class="content">
+                                           
+                                               
+                                                @switch($cupon->cupcategoria->cat_id)
+                                                    @case(3)
+                                                    <figure><img src="/assets/pg1_categoria6_on.svg" alt=""/></figure>
+                                                    @break
+                                            
+                                                    @case(5)
+                                                        <figure><img src="/assets/pg1_categoria3_on.svg" alt=""/></figure>
+                                                    @break
+                                                    @case(1)
+                                                        <figure><img src="/assets/pg1_categoria4_on.svg" alt=""/></figure>
+                                                    @break
+                                                    @case(9)
+                                                        <figure><img src="/assets/pg1_categoria10_on.svg" alt=""/></figure>
+                                                    @break
+                                                    @case(4)
+                                                        <figure><img src="/assets/pg1_categoria8_on.svg" alt=""/></figure>
+                                                    @break
+                                                    @case(6)
+                                                        <figure><img src="/assets/pg1_categoria7_on.svg" alt=""/></figure>
+                                                    @break
+                                                    @case(7)
+                                                        <figure><img src="/assets/pg1_categoria5_on.svg" alt=""/></figure>
+                                                    @break
+                                                    @case(2)
+                                                        <figure><img src="/assets/pg1_categoria9_on.svg" alt=""/></figure>
+                                                    @break
+                                                @endswitch 
+                                                <figcaption>
+                                                    <h4>COMIDA RÁPIDA</h4>
+                                                    <h3>Bembos</h3>
+                                                    <p> {{ @$cupon->cup_titulo }}</p>
+                                                </figcaption>
+                                            </div>
+                                        </div>
+                                        <!--<div class="element__info">
+                                            <div class="content">
+                                               
+                                            </div>
+                                        </div>-->
+                                        </a>
                                     </div>
 
                                  @endforeach
@@ -115,12 +121,44 @@
 
                                 </div>
 
+                                <!--
                                 <div class="info__paginator">
                                     {{ $cupones->links() }}
-                                </div>
+                                </div>-->
                             </div>
                         </div>
                     </div>
+                </section>
+
+
+                <section class="section5">
+                    <div class="section5__align">
+                        <div class="section5__main">
+                            <div class="list">
+                                <div class="item">
+                                    <div class="image">
+                                        <img  src="{{ url('assets/pg1_section5_celular.png')}}" alt="" />
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="title">
+                                        <h3>¡Qué esperas!</h3>
+                                        <span> Se parte del club, descarga la App en:</span>
+                                    </div>
+                                    <div class="link">
+                                        <a href="#">
+                                            <img  src="{{ url('assets/app_store.svg')}}" alt="" />
+                                        </a>
+
+                                        <a href="#">
+                                            <img  src="{{ url('assets/play_store.svg')}}" alt="" />
+                                        </a>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </duv>
                 </section>
                 </section>
             </div>

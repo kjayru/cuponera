@@ -7,12 +7,13 @@
         <div class="section1">
             <div class="section1__align">
                 <div class="section1__header">
+                    <!--
                     <div class="navigation">
                         <ul>
                             <li> <a href="/cupones">Inicio</a></li>
 
                         </ul>
-                    </div>
+                    </div>-->
                     @guest
                     @else
                     <div class="sesion">
@@ -73,38 +74,41 @@
                                                     </div>
 
                                                     <div class="content">
+                                                        
+                                                     
                                                         @switch($cup->cupcupon->cupcategoria->cat_id)
                                                             @case(3)
-                                                                <figure><img src="assets/pg1_categoria6_off.svg" alt=""/></figure>
+                                                                <figure><img src="assets/pg1_categoria6_on.svg" alt=""/></figure>
+                                                                
                                                                 @break
                                                         
                                                             @case(5)
-                                                                <figure><img src="assets/pg1_categoria3_off.svg" alt=""/></figure>
+                                                                <figure><img src="assets/pg1_categoria3_on.svg" alt=""/></figure>
                                                             @break
                                                             @case(1)
-                                                                <figure><img src="assets/pg1_categoria4_off.svg" alt=""/></figure>
+                                                                <figure><img src="assets/pg1_categoria4_on.svg" alt=""/></figure>
                                                             @break
                                                             @case(9)
-                                                                <figure><img src="assets/pg1_categoria10_off.svg" alt=""/></figure>
+                                                                <figure><img src="assets/pg1_categoria10_on.svg" alt=""/></figure>
                                                             @break
                                                             @case(4)
-                                                                <figure><img src="assets/pg1_categoria8_off.svg" alt=""/></figure>
+                                                                <figure><img src="assets/pg1_categoria8_on.svg" alt=""/></figure>
                                                             @break
                                                             @case(6)
-                                                                <figure><img src="assets/pg1_categoria7_off.svg" alt=""/></figure>
+                                                                <figure><img src="assets/pg1_categoria7_on.svg" alt=""/></figure>
                                                             @break
                                                             @case(7)
-                                                                <figure><img src="assets/pg1_categoria5_off.svg" alt=""/></figure>
+                                                                <figure><img src="assets/pg1_categoria5_on.svg" alt=""/></figure>
                                                             @break
                                                             @case(2)
-                                                                <figure><img src="assets/pg1_categoria9_off.svg" alt=""/></figure>
+                                                                <figure><img src="assets/pg1_categoria9_on.svg" alt=""/></figure>
                                                             @break
                                                         @endswitch
                                                         <figcaption>
                                                             <h4>COMIDA RÁPIDA</h4>
                                                             <h3>Bembos</h3>
 
-                                                            <p> {{ @$cup->cupcupon->cup_titulo }}</p>
+                                                            <p> {{ @$cup->cupcupon->cup_titulo }} </p>
                                                         </figcaption>
                                                     </div>
                                                 </div>

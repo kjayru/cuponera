@@ -7,6 +7,8 @@ var main = (function(APP, win, $, undefined) {
     list1: '#list1',
     list2: '#list2',
     list3: '#list3',
+    list4: '#list4',
+    list5: '#list5',
     menu: '.top_layout__main .content .content__menu',
     close: '.top_layout__main .content .content__header .buttons .close .close__icon',
     header: '.top_layout__header',
@@ -29,16 +31,6 @@ var main = (function(APP, win, $, undefined) {
   let URLactual = window.location.href 
   let  rute = URLactual
   
-
-  if (rute.includes('index') === true ) {
-    $(st.sesion).addClass('view_index')
-    console.log('estoy en el index')
-  } else if(rute.includes('cupon') === true){
-    $(st.navigation).addClass('view_cupon')
-    $(st.sesion).addClass('view_cupon')
-  }else if(rute.includes('index') === false){
-    $(st.navigation).addClass('view')
-  } 
 
 
   $('.usetype').on('click', function () {
@@ -252,6 +244,101 @@ var main = (function(APP, win, $, undefined) {
           }
         ]
       });
+
+      dom.slick4 = $(st.list4).slick({
+        arrows: true,
+        dots: true,
+        slidesToShow: 3,
+        infinite: false,
+        responsive: [
+
+          {
+
+            breakpoint: 1025,
+            settings: {
+              slidesToShow: 3,
+              //arrows: true,
+              //dots: false
+              
+            }
+
+          },
+
+          {
+
+            breakpoint: 769,
+            settings: {
+              slidesToShow: 2,
+              //arrows: true,
+              //dots: false
+              
+            }
+
+          },
+
+         
+          {
+
+            breakpoint: 570,
+            settings: {
+              variableWidth: true,
+              slidesToShow: 1,
+              slidesToScroll: 1,
+              arrows: false,
+              infinite : true,
+              dots: false,
+              centerMode: true,
+              centerPadding: '0px',
+            }
+
+          }
+          
+
+        ]
+      });
+
+      dom.slick5 = $(st.list5).slick({
+        arrows: true,
+        dots: true,
+        slidesToShow: 3,
+        infinite: false,
+        rows: 2,
+        responsive: [
+
+          {
+
+            breakpoint: 1025,
+            settings: {
+              slidesToShow: 2,
+              //arrows: true,
+              //dots: false
+              
+            }
+
+          },
+
+         
+          {
+
+            breakpoint: 570,
+            settings: {
+              variableWidth: true,
+              slidesToShow: 1,
+              rows: 1,
+              slidesToScroll: 1,
+              arrows: false,
+              infinite : true,
+              dots: false,
+              centerMode: true,
+              centerPadding: '0px',
+            }
+
+          }
+          
+
+        ]
+      });
+
      
     }
   }

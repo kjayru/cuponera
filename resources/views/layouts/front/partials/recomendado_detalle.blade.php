@@ -1,6 +1,6 @@
 
                 <div class="info">
-                    <div class="info__list" id="list2">
+                    <div class="info__list" id="list4">
                         @foreach($recomendados as $k => $reco)
                           
                             @if(!empty($reco->cupcupon->cupcategoria) && $reco->cupcupon->cup_estado==1)
@@ -14,8 +14,8 @@
 
                                             <div class="content">
 
-                                                    <!--<figure><img src="assets/pg1_ico_comida_.svg" alt=""/></figure>-->
-                                                            
+                                                    
+                                                          
                                                     @switch($reco->cupcupon->cupcategoria->cat_id)
                                                  
                                                     @case(3)
@@ -46,7 +46,7 @@
                                                
                                                 @endswitch
                                                
-                                               
+                                                
                                                 <figcaption>
                                                     <h4>COMIDA RÁPIDA</h4>
                                                     <h3>Bembos</h3>
