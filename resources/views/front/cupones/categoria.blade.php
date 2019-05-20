@@ -7,12 +7,12 @@
         <div class="section1">
             <div class="section1__align">
                 <div class="section1__header">
-                    <div class="navigation">
+                    <!--<div class="navigation">
                         <ul>
                             <li> <a href="/cupones">Inicio</a></li>
 
                         </ul>
-                    </div>
+                    </div>-->
                     @guest
                     @else
                     <div class="sesion">

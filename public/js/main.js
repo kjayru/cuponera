@@ -18,6 +18,9 @@ var main = (function(APP, win, $, undefined) {
 
   var mediaquery = win.matchMedia("(max-width: 426px)");
 
+
+
+  
   //var first = false;
 
   
@@ -30,7 +33,34 @@ var main = (function(APP, win, $, undefined) {
 
   let URLactual = window.location.href 
   let  rute = URLactual
+
+
   
+
+  var columnasDesktop = 2
+  var columnasMobile = 1
+
+
+
+  var medida = (screen.width) 
+  console.log(medida , rute)
+
+  if (medida < 650) {
+    
+      columnasDesktop = columnasMobile
+  }
+  
+  if(rute.includes('buscar')) {
+    let search_products = document.getElementById('search_products')
+    let value = search_products.textContent
+    let search_value = parseInt(value,10)
+    if (search_value === 0 ) {
+      $('.layout__main .page2__main .section4__main .without_products').addClass('active')
+      $('.layout__main .page2__main .section4__main .title').css('display' , 'none') 
+      $('.layout__main .page2__main .section1__align#search_header .section1__header .title').css('display' , 'none')  }
+  }
+
+
 
 
   $('.usetype').on('click', function () {
@@ -44,9 +74,6 @@ var main = (function(APP, win, $, undefined) {
   $('.page2__close , .layout__modal .page2 .section1__main .content .data .link').on('click', function () {
     $('.layout__modal .overlay').fadeOut()
   })
-
-
-  
 
 
 /*
@@ -256,7 +283,7 @@ var main = (function(APP, win, $, undefined) {
 
             breakpoint: 1025,
             settings: {
-              slidesToShow: 3,
+              slidesToShow: 2,
               //arrows: true,
               //dots: false
               
@@ -302,7 +329,7 @@ var main = (function(APP, win, $, undefined) {
         dots: true,
         slidesToShow: 3,
         infinite: false,
-        rows: 2,
+        rows: columnasDesktop,
         responsive: [
 
           {
@@ -324,7 +351,6 @@ var main = (function(APP, win, $, undefined) {
             settings: {
               variableWidth: true,
               slidesToShow: 1,
-              rows: 1,
               slidesToScroll: 1,
               arrows: false,
               infinite : true,

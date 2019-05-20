@@ -18,7 +18,7 @@
                         @else
                         <div class="sesion">
                            
-                          <a class="dropdown-item exit" href="{{ route('logout') }}"
+                          <a class="dropdown-item exit exit_sesion" href="{{ route('logout') }}"
                              onclick="event.preventDefault();
                                  document.getElementById('logout-form').submit();">
                              {{ __('Cerrar sesión') }}
@@ -142,12 +142,12 @@
                                 </div>
 
                                 <div class="title">
-                                    <h5>Mostrando {{ $resultados }} resultados</h5>
+                                    <h5>Mostrando <span id="search_products"> {{ $resultados }} </span> resultados</h5>
                                 </div>
 
                                 <div class="without_products">
                                     <h3>No se han encontrado resultados</h3>
-                                    <a href="/cuponera">
+                                    <a href="/cupones">
                                         <img src="/assets/atras.svg" alt=""/>
                                     </a>
                                 </div>
@@ -164,14 +164,25 @@
                                     <h3>Lo nuevo del club</h3>
                                 </div>
                                
+
+
+
                             </div>
                         </div>
                     </section>
 
+
+
                     </section>
                 </div>
+
+
+
             </div>
         </div>
         @include('layouts.front.partials.modal')
+
     </div>
+
+
 @endsection
