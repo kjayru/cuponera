@@ -84,13 +84,15 @@
 
                                         
 
-                                       
-                                        <p class="address"><p>{!! $cupon->cupempresa->emp_direccion !!}</p></p>
-
+                                       @if(!empty($cupon->cupempresa->emp_direccion))
+                                        <p class="address">{!! $cupon->cupempresa->emp_direccion !!}</p>
+                                      @endif
+                                      @if(!empty($cupon->cupempresa->emp_telefono))
                                         <p class="telephone">{{ $cupon->cupempresa->emp_telefono }}</p>
-
+                                        @endif
+                                        @if(!empty($cupon->cupempresa->emp_url))
                                         <p class="link"><a href="{{ $cupon->cupempresa->emp_url }}" target="_blank">{{ $cupon->cupempresa->emp_url }}</a></p>
-
+                                        @endif
                                     </div>
                                 </div>
                                 <div class="content__main">
