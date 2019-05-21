@@ -82,10 +82,10 @@
                                         <p>{!! $cupon->cup_descripcion_larga !!}</p>
                                         
 
-                                        <p>{!! $cupon->cupempresa->emp_direccion !!}</p>
+                                        
 
                                        
-                                        <p class="address">Dirección</p>
+                                        <p class="address"><p>{!! $cupon->cupempresa->emp_direccion !!}</p></p>
 
                                         <p class="telephone">{{ $cupon->cupempresa->emp_telefono }}</p>
 

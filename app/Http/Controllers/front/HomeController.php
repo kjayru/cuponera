@@ -72,7 +72,7 @@ class HomeController extends Controller
             $categorias = CupCategoria::where('cat_estado','1')->OrderBy('cat_orden','asc')->get();
             $departamento = CupDepartamento::where('dep_id',$dpto)->first();
             $departamentos = CupDepartamento::all();
-
+       
 
             return view('front.cupones.index',['categorias'=>$categorias,'recomendados'=>$recomendados,'cupones'=>$cupones,'departamento'=>$departamento,'departamentos'=>$departamentos]);
 
