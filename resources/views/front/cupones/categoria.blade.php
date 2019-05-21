@@ -154,11 +154,12 @@
                                         <span> Se parte del club, descarga la App en:</span>
                                     </div>
                                     <div class="link">
-                                        <a href="#">
+                                        
+                                        <a href="https://itunes.apple.com/pe/app/claro-club/id1343890516?mt=8" target="_blank">
                                             <img  src="{{ url('assets/app_store.svg')}}" alt="" />
                                         </a>
 
-                                        <a href="#">
+                                        <a href="https://play.google.com/store/apps/details?id=com.claro.claroclub" target="_blank">
                                             <img  src="{{ url('assets/play_store.svg')}}" alt="" />
                                         </a>
 
