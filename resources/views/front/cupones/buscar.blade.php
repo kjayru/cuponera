@@ -116,8 +116,8 @@
                                                                 @break
                                                             @endswitch
                                                             <figcaption>
-                                                                <h4>{{$cupon->cupcategoria->cat_nombre}}</h4>
-                                                                <h3>{{$cupon->cupempresa->emp_nombre}}</h3>
+                                                                <h4>{{@$cupon->cupcategoria->cat_nombre}}</h4>
+                                                                <h3>{{@$cupon->cupempresa->emp_nombre}}</h3>
                                                                 <p> {{ @$cupon->cup_titulo }}</p>
                                                             </figcaption>
                                                         </div>
