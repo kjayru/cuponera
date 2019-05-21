@@ -102,8 +102,8 @@
                                                     @break
                                                 @endswitch 
                                                 <figcaption>
-                                                    <h4>COMIDA RÁPIDA</h4>
-                                                    <h3>Bembos</h3>
+                                                    <h4>{{$cupon->cupcategoria->cat_nombre}}</h4>
+                                                    <h3>{{$cupon->cupempresa->emp_nombre}}</h3>
                                                     <p> {{ @$cupon->cup_titulo }}</p>
                                                 </figcaption>
                                             </div>

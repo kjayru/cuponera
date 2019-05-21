@@ -145,7 +145,10 @@ class HomeController extends Controller
 
         $resultados = count($cupons);
 
-        return view('front.cupones.buscar',['cupones'=>$cupons,'categorias'=>$categorias,'resultados'=>$resultados]);
+        $recomendados = CupCuponHome::OrderBy('ch_orden','asc')->get();
+
+
+        return view('front.cupones.buscar',['recomendados'=>$recomendados,'cupones'=>$cupons,'categorias'=>$categorias,'resultados'=>$resultados]);
     }
 
     public function salir(){
