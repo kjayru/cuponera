@@ -76,29 +76,37 @@
                                                
                                                 @switch($cupon->cupcategoria->cat_id)
                                                     @case(3)
-                                                    <figure><img src="/assets/pg1_categoria6_on.svg" alt=""/></figure>
-                                                    @break
-                                            
+                                                        <figure><img class="img_of" src="/assets/pg1_categoria6.svg" alt=""/>
+                                                        <img src="/assets/pg1_categoria6_on.svg" alt=""/></figure>
+                                                        @break
+                                                
                                                     @case(5)
-                                                        <figure><img src="/assets/pg1_categoria3_on.svg" alt=""/></figure>
+                                                        <figure><img class="img_of" src="/assets/pg1_categoria3.svg" alt=""/>
+                                                        <img src="/assets/pg1_categoria3_on.svg" alt=""/></figure>
                                                     @break
                                                     @case(1)
-                                                        <figure><img src="/assets/pg1_categoria4_on.svg" alt=""/></figure>
+                                                        <figure><img class="img_of" src="/assets/pg1_categoria4.svg" alt=""/>
+                                                        <img src="/assets/pg1_categoria4_on.svg" alt=""/></figure>
                                                     @break
                                                     @case(9)
-                                                        <figure><img src="/assets/pg1_categoria10_on.svg" alt=""/></figure>
+                                                        <figure><img class="img_of" src="/assets/pg1_categoria10.svg" alt=""/>
+                                                        <img src="/assets/pg1_categoria10_on.svg" alt=""/></figure>
                                                     @break
                                                     @case(4)
-                                                        <figure><img src="/assets/pg1_categoria8_on.svg" alt=""/></figure>
+                                                        <figure><img class="img_of" src="/assets/pg1_categoria8.svg" alt=""/>
+                                                        <img src="/assets/pg1_categoria8_on.svg" alt=""/></figure>
                                                     @break
                                                     @case(6)
-                                                        <figure><img src="/assets/pg1_categoria7_on.svg" alt=""/></figure>
+                                                        <figure><img class="img_of" src="/assets/pg1_categoria7.svg" alt=""/>
+                                                        <img src="/assets/pg1_categoria7_on.svg" alt=""/></figure>
                                                     @break
                                                     @case(7)
-                                                        <figure><img src="/assets/pg1_categoria5_on.svg" alt=""/></figure>
+                                                        <figure><img class="img_of" src="/assets/pg1_categoria5.svg" alt=""/>
+                                                        <img src="/assets/pg1_categoria5_on.svg" alt=""/></figure>
                                                     @break
                                                     @case(2)
-                                                        <figure><img src="/assets/pg1_categoria9_on.svg" alt=""/></figure>
+                                                        <figure><img class="img_of" src="/assets/pg1_categoria9.svg" alt=""/>
+                                                            <img src="/assets/pg1_categoria9_on.svg" alt=""/></figure>
                                                     @break
                                                 @endswitch 
                                                 <figcaption>
@@ -146,11 +154,12 @@
                                         <span> Se parte del club, descarga la App en:</span>
                                     </div>
                                     <div class="link">
-                                        <a href="#">
+                                        
+                                        <a href="https://itunes.apple.com/pe/app/claro-club/id1343890516?mt=8" target="_blank">
                                             <img  src="{{ url('assets/app_store.svg')}}" alt="" />
                                         </a>
 
-                                        <a href="#">
+                                        <a href="https://play.google.com/store/apps/details?id=com.claro.claroclub" target="_blank">
                                             <img  src="{{ url('assets/play_store.svg')}}" alt="" />
                                         </a>
 

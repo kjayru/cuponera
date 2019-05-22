@@ -49,7 +49,7 @@
             <div class="page3__main">
                 <section class="section1">
                     <div class="section1__align">
-
+                        <!--
                         <div class="bg_category">
                             <img src="../../../assets/detail_bg_1.svg" alt=""/>
                         </div>
@@ -57,7 +57,7 @@
                         <div class="share">
                             <img src="../../../assets/share.svg" alt=""/>
                             <img src="../../../assets/favorite.svg" alt=""/>
-                        </div>
+                        </div>-->
 
                         <div class="category_detail">
                             <span>{{ \Illuminate\Support\Str::title($cupon->cupcategoria->cat_nombre) }}</span>
@@ -120,7 +120,7 @@
                             <div class="title">
                                 <h3>El club tiene para ti</h3>
                             </div>
-                            @include('layouts.front.partials.recomendado_detalle')
+                            @include('layouts.front.partials.recomendado_detalle') 
                         </div>
                     </div>
                 </section>

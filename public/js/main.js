@@ -61,11 +61,11 @@ var main = (function(APP, win, $, undefined) {
   }
 
 
-
-
   $('.usetype').on('click', function () {
+    $('.usetype.active').removeClass('active')
     $(this).toggleClass('active');
   })
+
 
   $('#btnCambiar').on('click', function () {
     $('.layout__modal .overlay').fadeIn()
