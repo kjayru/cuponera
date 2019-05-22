@@ -9,6 +9,7 @@ var main = (function(APP, win, $, undefined) {
     list3: '#list3',
     list4: '#list4',
     list5: '#list5',
+    list6: '#list6',
     menu: '.top_layout__main .content .content__menu',
     close: '.top_layout__main .content .content__header .buttons .close .close__icon',
     header: '.top_layout__header',
@@ -365,6 +366,46 @@ var main = (function(APP, win, $, undefined) {
         ]
       });
 
+      dom.slick6 = $(st.list6).slick({
+        arrows: true,
+        dots: false,
+        slidesToShow: 3,
+        infinite: false,
+        rows: columnasDesktop,
+        responsive: [
+
+          {
+
+            breakpoint: 1025,
+            settings: {
+              slidesToShow: 2,
+              //arrows: true,
+              //dots: false
+              
+            }
+
+          },
+
+         
+          {
+
+            breakpoint: 570,
+            settings: {
+              variableWidth: true,
+              slidesToShow: 1,
+              slidesToScroll: 1,
+              arrows: false,
+              infinite : true,
+              dots: false,
+              centerMode: true,
+              centerPadding: '0px',
+            }
+
+          }
+          
+
+        ]
+      });
      
     }
   }
