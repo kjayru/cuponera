@@ -5940,7 +5940,7 @@ html.fp-enabled,
     .layout__main .page2__main .section4__main .info__list .element__info .content p br {
         display: none; } }
 .layout__main .page2__main .section4__main .info__paginator {
-    text-align: center;
+    text-align: center; 
     padding: 20px 0 0;
     position: relative;
     z-index: 6; }
