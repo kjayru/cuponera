@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "95d02e1b95f79d876641cc1597da652d",
+    "content-hash": "c2f39e327340d573dade153a4aa23e0b",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -265,6 +265,56 @@
                 "validator"
             ],
             "time": "2018-12-04T22:38:24+00:00"
+        },
+        {
+            "name": "elic-dev/laravel-math-captcha",
+            "version": "1.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/elic-dev/laravel-math-captcha.git",
+                "reference": "4fc3323937c4f9fea201f9fae1d76076cf41cf04"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/elic-dev/laravel-math-captcha/zipball/4fc3323937c4f9fea201f9fae1d76076cf41cf04",
+                "reference": "4fc3323937c4f9fea201f9fae1d76076cf41cf04",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "ElicDev\\MathCaptcha\\MathCaptchaServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "ElicDev\\MathCaptcha\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Matthias Lill",
+                    "email": "m.lill@gmx.de"
+                }
+            ],
+            "description": "A simple math captcha for Laravel form validation.",
+            "keywords": [
+                "captcha",
+                "laravel",
+                "laravel5",
+                "math",
+                "math-captcha"
+            ],
+            "time": "2018-09-24T13:54:18+00:00"
         },
         {
             "name": "erusev/parsedown",

@@ -82,13 +82,15 @@
                                                 </dl> 
                                                 <dl class="row1">
                                                     <dt>    
-                                                        <label class="form__label1">No soy un robot <span>{{ captcha_img()  }}</span></label>
-                                                        <input class="form__text1" type="text" name="captcha" />
+                                                        <label class="form__label1">No soy un robot <span>{{ app('mathcaptcha')->label() }}</span></label>
+                                                        <!--<input class="form__text1" type="text" name="captcha" />-->
+                                                        
                                                     </dt>
                                                     @if ($errors->has('captcha'))
                                                     <dd><span  class="error">{{ $errors->first('captcha') }}</span></dd>
                                                     @endif
                                                 </dl>
+
                                             </div>
                                         </div>
 

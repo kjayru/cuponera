@@ -85,7 +85,7 @@
                                         
 
                                       @if(!empty($cupon->cupempresa->emp_direccion))
-                                        <p class="address">{!! $cupon->cupempresa->emp_direccion !!}</p>
+                                        <p class="address">{{ strip_tags($cupon->cupempresa->emp_direccion)}}</p>
                                       @endif
                                       @if(!empty($cupon->cupempresa->emp_telefono))
                                         <p class="telephone">{{ $cupon->cupempresa->emp_telefono }}</p>

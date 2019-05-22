@@ -59,8 +59,8 @@ class LoginController extends Controller
 
     protected function verify(Request $request)
     {
-        
-        $rules = ['captcha' => 'required|captcha',
+       
+        $rules = ['mathcaptcha' => 'required|mathcaptcha',
             'user_ndoc' => 'required|string',
             'departamento' => 'required|string'];
 
