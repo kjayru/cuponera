@@ -6,6 +6,12 @@
  */
 /* FONT PATH
  * -------------------------- */
+
+ .input:-internal-autofill-selected {
+    background-color: rgb(232, 240, 254) !important;
+    background-image: none !important;
+    color: rgb(0, 0, 0) !important;
+}
 @import url(https://fonts.googleapis.com/css?family=Anton|Bevan|Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i);
 @font-face {
     font-family: 'FontAwesome';
@@ -3691,7 +3697,7 @@ html.fp-enabled,
 .layout__main .page1__header .section1__header .login .form__select1 {
     font-size: 0.9375em;
     font-weight: 400;
-    color: #000000; }
+    color: #797979; }
 .layout__main .page1__header .section1__header .login .form__label1 {
     display: block;
     font-size: 1.1em;
@@ -4064,6 +4070,7 @@ html.fp-enabled,
         }}
 .layout__main .page1__header .section1__header .login .form dl dt input[type="text"] {
     width: 100%;
+    color: #797979;
     padding: 0px 20px 0px 20px;
     border: 0;
     background-color: transparent;
@@ -4077,6 +4084,9 @@ html.fp-enabled,
     overflow: hidden;
     position: relative;
 }
+
+
+
 
 .layout__main .page1__header .section1__header .login .form dl:nth-child(2) dt.content_input:before{
     display: none;
@@ -4596,6 +4606,16 @@ html.fp-enabled,
     height: 96px;
     overflow: hidden;
     margin: auto; }
+
+
+.layout__main .page2__main .section1__header .list__item .category.active figure{
+    display: none;
+}
+
+.layout__main .page2__main .section1__header .list__item .category.active figure.active{
+    display: block
+}
+
 @media screen and (max-width: 568px) {
     .layout__main .page2__main .section1__header .list__item .category {
         width: 90px;
@@ -5619,15 +5639,20 @@ html.fp-enabled,
     font-size: 0.875em;
     font-weight: 300;
     color: #000000;
+    position: relative;
+    top: -27px;
     display: table-cell;
     text-align: right; }
 @media screen and (max-width: 568px) {
     .layout__main .page2__main .section4__main .title h5 {
         display: block;
+        top: 30px;
         text-align: center; } }
 .layout__main .page2__main .section4__main .info {
     position: relative;
     padding: 0px 0 0px 0; }
+
+
 .layout__main .page2__main .section4__main .info__list {
     width: 1160px;
     margin: 0 auto;
@@ -5922,6 +5947,9 @@ html.fp-enabled,
     display: inline-block;
     width: 34px; }
 
+.layout__main .page2__main .section4__main .info__paginator ul li.disabled{
+    display: none;
+}
 .layout__main .page2__main .section4__main .info__paginator ul li a {
     font-size: 1.3em;
     font-weight: 400;
@@ -5931,7 +5959,6 @@ html.fp-enabled,
     -webkit-border-radius: 50% 50% 50% 50%;
     -moz-border-radius: 50% 50% 50% 50%;
     border-radius: 50% 50% 50% 50%;
-    border: 1px solid #f4f4f4;
     display: inline-block;
     -webkit-transition: all 0.1s ease-in 0s;
     -moz-transition: all 0.1s ease-in 0s;
@@ -5945,7 +5972,6 @@ html.fp-enabled,
     font-size: 1.5em;
     font-weight: 400;
     color: #2197ae;
-    line-height: 34px;
     margin: 0 10px;
     cursor: pointer;
     -webkit-border-radius: 50% 50% 50% 50%;
@@ -8525,6 +8551,6 @@ li.page-item.active {
     background: #2197ae;
     color: white;
     font-size: 1.5em;
-    padding: 4px 9px;
+    padding: 2px 9px;
     border-radius: 50%;
 }
