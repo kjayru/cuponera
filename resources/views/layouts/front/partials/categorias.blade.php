@@ -5,13 +5,14 @@
                 <h3>¿Qué vas a disfrutar hoy?</h3>
             </div>
             <div class="list" id="list3">
-
+               
                 @foreach($categorias as $k => $cat)
+                
                     @if($k>0 && $k<9)
                     <a class="list__item type1" href="/cupones/{{ $cat->cat_alias }}">
-                        <div class="category">
+                        <div class="category @if($cat->cat_alias===$url_slug) active @endif">
 
-                          
+                           
                             @switch($cat->cat_id)
                                     @case(3)
                                     

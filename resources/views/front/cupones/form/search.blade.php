@@ -1,5 +1,5 @@
-<form class="form" action="/buscar" method="POST">
-    @csrf
+<form class="form" action="/buscar" method="get">
+   
     <div class="form__row1">
         <div class="form__info">
             <h3>

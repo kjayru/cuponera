@@ -64,7 +64,7 @@ class HomeController extends Controller
               return redirect($request->session()->get('url')['intended']);
             }
         }
-
+        $url = '';
             $cupones = CupSegmentoCupon::where('seg_id',$segmento)->OrderBy('sc_orden','desc')->get();
           
             $recomendados = CupCuponHome::OrderBy('ch_orden','asc')->get();
@@ -72,9 +72,15 @@ class HomeController extends Controller
             $categorias = CupCategoria::where('cat_estado','1')->OrderBy('cat_orden','asc')->get();
             $departamento = CupDepartamento::where('dep_id',$dpto)->first();
             $departamentos = CupDepartamento::all();
-       
 
-            return view('front.cupones.index',['categorias'=>$categorias,'recomendados'=>$recomendados,'cupones'=>$cupones,'departamento'=>$departamento,'departamentos'=>$departamentos]);
+            $url_slug = $_SERVER['REQUEST_URI'];
+            $ur = explode("/",$url_slug);
+            if(!empty($ur[2])){
+                $url = $ur[2];
+            }
+           
+
+            return view('front.cupones.index',['url_slug'=>$url,'categorias'=>$categorias,'recomendados'=>$recomendados,'cupones'=>$cupones,'departamento'=>$departamento,'departamentos'=>$departamentos]);
 
 
     }
@@ -83,40 +89,28 @@ class HomeController extends Controller
     public function categorias($categoria){
 
        $id = Auth::id();
-
         $user = User::find($id);
-
         $segmento = $user->cupusuario->cupsegmento->seg_id;
-
-
         $categoria = CupCategoria::where('cat_alias',$categoria)->first();
-
         $cat_id = $categoria->cat_id;
-
         $nombre = $categoria->cat_nombre;
-        //$cupones = CupCupon::where('cat_id',$categoria->cat_id)->paginate(6);
-
         $cupones = CupSegmentoCupon::where('seg_id',$segmento)->OrderBy('sc_orden','asc')->get();
 
-
         foreach($cupones as $cupon){
-
             if(!empty($cupon->cupcupon)) {
-
                 if($cupon->cupcupon->cat_id==$cat_id && $cupon->cupcupon->cup_estado=1){
                     $matriz[] = $cupon->cupcupon;
                 }
             }
         }
-
-
+        $url_slug = $_SERVER['REQUEST_URI'];
+        $ur = explode("/",$url_slug);
+        $url = $ur[2];
+      
         $collection = (new Collection($matriz))->paginate(9);
-
-
-
         $categorias = CupCategoria::where('cat_estado','1')->OrderBy('cat_orden','asc')->get();
 
-        return view('front.cupones.categoria',['cupones'=>$collection,'categorias'=>$categorias,'categoria_id'=>$categoria->cat_id,'cat_nombre'=>$nombre]);
+        return view('front.cupones.categoria',['url_slug'=>$url,'cupones'=>$collection,'categorias'=>$categorias,'categoria_id'=>$categoria->cat_id,'cat_nombre'=>$nombre]);
     }
 
 
@@ -137,19 +131,20 @@ class HomeController extends Controller
 
 
     public function buscar(Request $request){
-
+       
         $categorias = CupCategoria::where('cat_estado','1')->OrderBy('cat_orden','asc')->get();
 
         $cupons = CupCupon::where('cup_titulo','like','%'.$request->search.'%')
-                            ->orWhere('cup_descripcion_larga','like','%'.$request->search.'%')->get();
+                            ->orWhere('cup_descripcion_larga','like','%'.$request->search.'%')->paginate(9);
 
         $resultados = count($cupons);
 
         $recomendados = CupCuponHome::OrderBy('ch_orden','asc')->get();
 
-
+        $cupons->appends(['search' => $request->search]);
         return view('front.cupones.buscar',['recomendados'=>$recomendados,'cupones'=>$cupons,'categorias'=>$categorias,'resultados'=>$resultados]);
     }
+
 
     public function salir(){
         return view('front.home.salir');

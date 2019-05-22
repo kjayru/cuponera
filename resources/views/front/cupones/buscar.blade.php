@@ -145,7 +145,7 @@
                                     </div>
 
                                     <div class="info__paginator">
-                                        
+                                        {{ $cupones->links() }}
                                     </div>
                                 </div>
 
