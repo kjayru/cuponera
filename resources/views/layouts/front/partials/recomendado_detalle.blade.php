@@ -56,9 +56,10 @@
                                                
                                                 
                                                 <figcaption>
-                                                    <h4>COMIDA RÁPIDA</h4>
-                                                    <h3>Bembos</h3>
-                                                    <p> {{ $reco->cupcupon->cup_titulo }}</p>
+                                                    <h4>{{@$reco->cupcupon->cupcategoria->cat_nombre}}</h4>
+                                                    <h3>{{@$reco->cupcupon->cupempresa->emp_nombre}}</h3>
+                                                    <p> {{ @$reco->cupcupon->cup_titulo }}</p>
+                                                    
                                                 </figcaption>
                                             </div>
                                         </div>
