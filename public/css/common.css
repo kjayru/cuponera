@@ -4734,7 +4734,7 @@ html.fp-enabled,
     padding: 15px 0 0 0;
     text-align: center; }
 .layout__main .page2__main .section1__header .list__item figcaption p {
-    font-size: 1.375em;
+    font-size: 1em;
     font-weight: 400; }
 @media screen and (max-width: 568px) {
     .layout__main .page2__main .section1__header .list__item figcaption p {
@@ -5941,7 +5941,9 @@ html.fp-enabled,
         display: none; } }
 .layout__main .page2__main .section4__main .info__paginator {
     text-align: center;
-    padding: 20px 0 0; }
+    padding: 20px 0 0;
+    position: relative;
+    z-index: 6; }
 
 .layout__main .page2__main .section4__main .info__paginator ul li {
     display: inline-block;
@@ -6884,7 +6886,8 @@ html.fp-enabled,
     position: absolute;
     left: 0;
     top: -34px;
-    width: 161px;
+    padding: 0 10px;
+    min-width: 161px;
     height: 68px;
     background: #da272c;
     text-align: center;
