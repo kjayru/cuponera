@@ -75,7 +75,7 @@
                                     <h5>Mostrando {{ $resultados }} resultados</h5>
                                 </div>-->
                                 <div class="info">
-                                    <div class="info__list" id="list6">
+                                    <div class="info__list" >
 
                                         @foreach($cupones as $cupon)
 

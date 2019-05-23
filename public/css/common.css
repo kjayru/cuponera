@@ -4127,6 +4127,8 @@ html.fp-enabled,
 .layout__main .page1__header .section1__header .login .form dl.row1 dt input {
     width: 72px;
     height: 25px;
+    position: relative;
+    top: -7px;
     -webkit-border-radius: 9px 9px 9px 9px;
     -moz-border-radius: 9px 9px 9px 9px;
     border-radius: 9px 9px 9px 9px;
@@ -5757,7 +5759,8 @@ html.fp-enabled,
     margin-bottom: 30px; }
 @media screen and (max-width: 1024px) {
     .layout__main .page2__main .section4__main .info__list .element {
-        width: 50%;} }
+        width: 50%;
+        display: inline-block;} }
 @media screen and (max-width: 568px) {
     .layout__main .page2__main .section4__main .info__list .element {
         width: 100%;
@@ -5947,7 +5950,7 @@ html.fp-enabled,
 
 .layout__main .page2__main .section4__main .info__paginator ul li {
     display: inline-block;
-    width: 34px; }
+    width: 31px; }
 
 .layout__main .page2__main .section4__main .info__paginator ul li.disabled{
     display: none;
@@ -5956,7 +5959,7 @@ html.fp-enabled,
     font-size: 1.3em;
     font-weight: 400;
     color: #2197ae;
-    line-height: 34px;
+    line-height: 31px;
     cursor: pointer;
     -webkit-border-radius: 50% 50% 50% 50%;
     -moz-border-radius: 50% 50% 50% 50%;
@@ -5967,11 +5970,11 @@ html.fp-enabled,
     -o-transition: all 0.1s ease-in 0s;
     -ms-transition: all 0.1s ease-in 0s;
     transition: all 0.1s ease-in 0s;
-    width: 34px;
-    height: 34px; }
+    width: 31px;
+    height: 31px; }
 .layout__main .page2__main .section4__main .info__paginator ul li.active {
     background: #2197ae;
-    font-size: 1.5em;
+    font-size: 1.3em;
     font-weight: 400;
     color: #2197ae;
     margin: 0 10px;
@@ -5979,15 +5982,14 @@ html.fp-enabled,
     -webkit-border-radius: 50% 50% 50% 50%;
     -moz-border-radius: 50% 50% 50% 50%;
     border-radius: 50% 50% 50% 50%;
-    border: 1px solid #f4f4f4;
     display: inline-block;
     -webkit-transition: all 0.1s ease-in 0s;
     -moz-transition: all 0.1s ease-in 0s;
     -o-transition: all 0.1s ease-in 0s;
     -ms-transition: all 0.1s ease-in 0s;
     transition: all 0.1s ease-in 0s;
-    width: 34px;
-    height: 34px;
+    width: 31px;
+    height: 31px;
     color: white; }
 .layout__main .page2__main .section4__main .info__paginator ul li a.active:hover {
     background: #2197ae;
@@ -7092,7 +7094,7 @@ html.fp-enabled,
 
 .layout__main .page3__main .section1__main .content__header .info .address{
     padding-left: 35px;
-    margin-bottom: 25px;
+    margin-bottom: 10px;
     position:   relative;
     margin-top: 38px;   
 }
@@ -7101,8 +7103,9 @@ html.fp-enabled,
 
 .layout__main .page3__main .section1__main .content__header .info .telephone,
 .layout__main .page3__main .section1__main .content__header .info .link{
+    margin-top: 15px;
     padding-left: 35px;
-    margin-bottom: 25px;
+    margin-bottom: 10px;
     position:   relative;   
 }
 
@@ -8479,7 +8482,7 @@ html.fp-enabled,
 }
 
 .layout__main .page2__main .section4__main .info__list .element__image .content figcaption h4 {
-    font-size: 9px;
+    font-size: 11px;
     margin-bottom: 8px;
     padding: 10px 0 5px;
     font-weight: 400;
