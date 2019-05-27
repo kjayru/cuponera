@@ -16,6 +16,7 @@
                     </div>-->
                     @guest
                     @else
+                    <!--
                     <div class="sesion">
                        
                       <button class="exit" 
@@ -27,7 +28,7 @@
                      <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                          @csrf
                      </form>
-                    </div>
+                    </div>-->
                  @endguest
 
                 </div>
@@ -165,7 +166,7 @@
                     <div class="section3__align">
                         <div class="section3__main">
                             <div class="title">
-                                <h3>Lo nuevo del club</h3>
+                                <h3>Lo nuevo en el Club</h3>
                             </div>
                             @include('layouts.front.partials.recomendado')
                         </div>

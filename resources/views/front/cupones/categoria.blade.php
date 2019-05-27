@@ -60,7 +60,7 @@
                                <!-- <h5>Mostrando 1 -  {{  $cupones->count() }} de   {{  $cupones->total() }} resultados</h5> -->
                             </div>
                             <div class="info">
-                                <div class="info__list" id="list5">
+                                <div class="info__list"> <!--id="list5"-->
 
                                 @foreach($cupones as $cupon)
                                     <div class="element"><a href="/cupones/{{$cupon->cupcategoria->cat_alias}}/{{$cupon->cup_id}}/{{ \Illuminate\Support\Str::slug($cupon->cup_titulo, '-') }}">
@@ -129,10 +129,10 @@
 
                                 </div>
 
-                                <!--
+                                
                                 <div class="info__paginator">
                                     {{ $cupones->links() }}
-                                </div>-->
+                                </div>
                             </div>
                         </div>
                     </div>
