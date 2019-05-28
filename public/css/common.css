@@ -4610,6 +4610,8 @@ html.fp-enabled,
 .layout__main .page2__main .section1__header .list__item .category {
     width: 96px;
     height: 96px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 8px #00000069;
     overflow: hidden;
     margin: auto; }
 
