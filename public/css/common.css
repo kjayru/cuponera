@@ -4525,7 +4525,7 @@ html.fp-enabled,
 
 @media screen and (max-width: 568px) {
     .layout__main .page2__main .section1__header {
-        padding: 30px 20px 30px 20px;
+        padding: 60px 20px 30px 20px;
         height: auto; } }
 .layout__main .page2__main .section1__header .title {
     text-align: center;
