@@ -1,6 +1,6 @@
 <section class="section1">
     <div class="section1__align">
-        <a name="{{ @$cat_nombre }}" style="width: 100%; display: block;"></a>
+  
         <div class="section1__header">
             <div class="title">
                 <h3>¿Qué vas a disfrutar hoy?</h3>

@@ -1,15 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="26px" height="25px" viewBox="0 0 26 25" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: sketchtool 54.1 (76490) - https://sketchapp.com -->
-    <title>8D118966-E870-4102-862C-FD7C7654E51B</title>
-    <desc>Created with sketchtool.</desc>
-    <g id="Page-5-HOME-APROBADO" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
-        <g id="Home_cuponera_cupon-_v2" transform="translate(-204.000000, -1005.000000)" stroke="#C8CCD4">
-            <g id="Group-5" transform="translate(201.000000, 763.000000)">
-                <g id="navigate" transform="translate(3.000000, 243.000000)">
-                    <polygon points="11.9565217 24 11.9565217 12.5217391 0 12.5217391 25 0"></polygon>
-                </g>
-            </g>
-        </g>
-    </g>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="30" viewBox="0 0 24 30">
+    <path fill="#DA272C" fill-rule="nonzero" d="M11.842 0C5.37.169.162 5.566 0 12.273c.11 1.983.638 3.917 1.547 5.666.027.054.058.109.09.163C8.8 30 10.932 30 11.842 30c1.42 0 2.96-1.036 6.607-6.32a115.583 115.583 0 0 0 3.598-5.578c.033-.054.063-.109.09-.163a13.992 13.992 0 0 0 1.547-5.666C23.522 5.566 18.314.169 11.842 0zm8.53 17.025s-6.565 10.93-8.53 10.93c-1.949 0-8.53-10.93-8.53-10.93a11.957 11.957 0 0 1-1.338-4.752c0-5.649 4.418-10.228 9.868-10.228s9.869 4.58 9.869 10.228a11.955 11.955 0 0 1-1.34 4.752zm-8.53-10.889c-2.907 0-5.263 2.442-5.263 5.455 0 3.012 2.356 5.454 5.263 5.454s5.263-2.442 5.263-5.454c-.003-3.011-2.358-5.45-5.263-5.455zm0 8.864c-1.817 0-3.29-1.526-3.29-3.41 0-1.882 1.473-3.408 3.29-3.408s3.29 1.526 3.29 3.409c0 1.883-1.473 3.409-3.29 3.409z"/>
 </svg>

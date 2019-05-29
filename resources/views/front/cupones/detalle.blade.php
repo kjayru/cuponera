@@ -113,7 +113,9 @@
                     </div>
                 </section>
 
-
+                <section id="image_print">
+                    <img src="/assets/claroclub.svg" alt=""/>
+                </section>
 
                 <section class="section2" id="bg_section2">
                     <div class="section2__align">

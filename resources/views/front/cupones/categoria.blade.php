@@ -2,7 +2,6 @@
 @section('content')
 <div class="layout" id="app">
 
-
     <div class="layout__header">
         <div class="section1">
             <div class="section1__align">
@@ -14,7 +13,7 @@
                         </ul>
                     </div>-->
                     @guest
-                    @else
+                    @else <!--
                     <div class="sesion">
                        
                       <button class="exit" 
@@ -26,7 +25,7 @@
                      <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                          @csrf
                      </form>
-                    </div>
+                    </div>-->
                  @endguest
                 </div>
             </div>
@@ -39,13 +38,17 @@
                 <section class="section1">
                     <div class="section1__align">
                         <div class="section1__header">
+                            
                             <div class="search">
 
                                     @include('front.cupones.form.search')
 
                             </div>
+
                         </div>
                     </div>
+
+
                 </section>
 
 

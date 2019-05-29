@@ -1,0 +1,25 @@
+@media print {
+	#bg_section2{
+		display: none;
+	}
+	.top_layout{
+		display: none;
+	}
+	.bottom_layout{
+		display: none;
+	}
+
+	.layout{
+		padding-top: 40px;
+		background: url("../assets/vigencia.svg") no-repeat bottom right;
+	}
+
+	.layout__main .page3__main .section1__main .content__main .buttons button {
+		display: none;
+	}
+	body {
+	-webkit-print-color-adjust: exact; /*economy | exact*/
+	color-adjust: exact;
+	}
+
+}
