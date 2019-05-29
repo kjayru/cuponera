@@ -127,7 +127,9 @@
                                                             <figcaption>
                                                                 <h4>{{@$cupon->cupcategoria->cat_nombre}}</h4>
                                                                 <h3>{{@$cupon->cupempresa->emp_nombre}}</h3>
-                                                                <p> {{ @$cupon->cup_titulo }}</p>
+                                                                <p> 
+                                                                    {{ \Illuminate\Support\Str::limit(strip_tags($cupon->cup_titulo ),85)}}
+                                                                </p>
                                                             </figcaption>
                                                         </div>
                                                     </div>
