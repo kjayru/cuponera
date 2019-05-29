@@ -58,7 +58,9 @@
                                                 <figcaption>
                                                     <h4>{{@$reco->cupcupon->cupcategoria->cat_nombre}}</h4>
                                                     <h3>{{@$reco->cupcupon->cupempresa->emp_nombre}}</h3>
-                                                    <p> {{ @$reco->cupcupon->cup_titulo }}</p>
+                                                    <p> 
+                                                        {{ \Illuminate\Support\Str::limit(strip_tags($reco->cupcupon->cup_titulo ),75)}}
+                                                    </p>
                                                     
                                                 </figcaption>
                                             </div>
