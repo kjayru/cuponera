@@ -25,6 +25,33 @@ var main = (function(APP, win, $, undefined) {
   //var first = false;
 
   
+$(function(){
+
+     $('a[href*=#]').click(function() {
+
+     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+         && location.hostname == this.hostname) {
+
+             var $target = $(this.hash);
+
+             $target = $target.length && $target || $('[name=' + this.hash.slice(1) +']');
+
+             if ($target.length) {
+
+                 var targetOffset = $target.offset().top;
+
+                 $('html,body').animate({scrollTop: targetOffset}, 1000);
+
+                 return false;
+
+            }
+
+       }
+
+   });
+
+});
+
 
 
   var dom = {};
@@ -75,6 +102,11 @@ var main = (function(APP, win, $, undefined) {
   $('.page2__close , .layout__modal .page2 .section1__main .content .data .link').on('click', function () {
     $('.layout__modal .overlay').fadeOut()
   })
+
+
+
+
+
 
 
 /*

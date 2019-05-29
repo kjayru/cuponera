@@ -4,12 +4,13 @@
             <div class="title">
                 <h3>¿Qué vas a disfrutar hoy?</h3>
             </div>
+
             <div class="list" id="list3">
                
                 @foreach($categorias as $k => $cat)
                 
-                    @if($k>0 && $k<9)
-                    <a class="list__item type1" href="/cupones/{{ $cat->cat_alias }}">
+                    @if($k>0 && $k<9 )
+                    <a class="list__item type1" href="/cupones/{{ $cat->cat_alias }}#{{ @$cat->cat_nombre }}" >
                         <div class="category @if($cat->cat_alias===$url_slug) active @endif">
 
                            
@@ -63,9 +64,11 @@
                         </figcaption>
                     </a>
                     @endif
+
+
                 @endforeach
 
-
+                <a name="{{ @$cat_nombre }}" style="width: 100%; display: block;"></a>
             </div>
         </div>
     </div>
