@@ -51,6 +51,20 @@
 
             </div>
             <div class="page2__main">
+
+                <section class="section0" id="category_active">
+                    <div class="section0__align">
+                        <div class="section0__header" >
+                            <div class="title">
+                                <a href="/cupones">
+                                <img src="/assets/search_arrow.svg" alt=""/>
+                                <h3>Volver</h3>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
                 @include('layouts.front.partials.categorias')
                 <section class="section4">
                     <div class="section4__align">
