@@ -4471,7 +4471,9 @@ html.fp-enabled,
     top: 1px;
     right: 1px;
     color: white;
-    font-weight: 500;
+    font-weight: 700;
+    font-size:  0.93em;
+    letter-spacing: 1.2px;
     width: 215px;
     cursor: pointer;
     text-align: center;
@@ -4538,6 +4540,7 @@ html.fp-enabled,
         height: 100%; }
     .layout__main .page2__header .section1__header .search .form dl dt .btn_search {
         width: 80px !important;
+        font-size: .82em;
         padding: 0 15px !important;
         } }
 

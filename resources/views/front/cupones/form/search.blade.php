@@ -12,7 +12,7 @@
             <dl>
                 <dt>
                     <input class="form__text1" type="text" name="search" placeholder="Buscar"/>
-                    <div class="btn_search">Buscar</div>
+                    <input type="submit" value="Buscar"class="btn_search">
                 </dt>
             </dl>
         </div>
