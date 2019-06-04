@@ -39,9 +39,9 @@
                     <div class="section1__align">
                         <div class="section1__header">
                             
-                            <div class="search">
+                            <div class="search search-category">
 
-                                    @include('front.cupones.form.search')
+                                    @include('front.cupones.form.search-type-2')
 
                             </div>
 

@@ -4317,12 +4317,18 @@ html.fp-enabled,
     -webkit-border-radius: 5px 5px 5px 5px;
     -moz-border-radius: 5px 5px 5px 5px;
     border-radius: 5px 5px 5px 5px; }
+.layout__main .page2__header .section1__header .search-category{
+    padding: 30px 0;
+}
 @media screen and (max-width: 768px) {
     .layout__main .page2__header .section1__header .search {
-        padding: 40px 0px 20px; } }
+        padding: 40px 0px 20px; }
+    .layout__main .page2__header .section1__header .search-category {
+        padding: 0; } 
+         }
 @media screen and (max-width: 568px) {
     .layout__main .page2__header .section1__header .search {
-        padding: 70px 0px 40px; }
+        padding: 40px 0px 40px; }
     }
 .layout__main .page2__header .section1__header .search .form__info {
     text-align: center; }
@@ -4385,6 +4391,7 @@ html.fp-enabled,
 .layout__main .page2__header .section1__header .search .form__fields:before {
     content: "\f002";
     display: inline-block;
+    display: none;
     margin-right: 0px;
     font: normal normal normal 14px/1 FontAwesome;
     font-size: inherit;
@@ -4395,16 +4402,21 @@ html.fp-enabled,
     -ms-transform: translate(0, 0);
     transform: translate(0, 0);
     font-size: 22px;
-    color: #2197ae;
+    color: #ffffff;
     position: absolute;
     top: 12px;
-    left: 24px; }
+    z-index: 5;
+    right: 34px; }
 .layout__main .page2__header .section1__header .search .form .error {
     display: none; }
 .layout__main .page2__header .section1__header .search .form__row1 {
     padding: 0 0 0px; }
 .layout__main .page2__header .section1__header .search .form__row2 {
     padding: 0 30px 30px; }
+
+.layout__main .page2__header .section1__header .search-category .form__row2 {
+    padding: 0 30px 10px; }
+
 @media screen and (max-width: 568px) {
     .layout__main .page2__header .section1__header .search .form__row2 {
         padding: 0 20px 10px; } }
@@ -4461,12 +4473,12 @@ html.fp-enabled,
 
 
 
-.layout__main .page2__header .section1__header .search .form dl dt .btn_search{
+.layout__main .page2__header .section1__header .search .form dl dt .btn_search {
     position: absolute;
     -webkit-border-radius: 0px 30px 30px 0px;
     -moz-border-radius: 0px 30px 30px 0px;
     border-radius: 0px 30px 30px 0px;
-    padding: 0px 60px 0px 60px;
+    padding: 0px ;
     border: 0;
     top: 1px;
     right: 1px;
@@ -4474,21 +4486,24 @@ html.fp-enabled,
     font-weight: 700;
     font-size:  0.93em;
     letter-spacing: 1.2px;
-    width: 215px;
+    width: 85px;
     cursor: pointer;
     text-align: center;
     background-color: red;
     height: 48px;
     line-height: 48px;
-     background-image: linear-gradient(to bottom, #ed0000, #b7222f);
+    background: #2197ae;
+    background: url("../assets/search_icon.svg") no-repeat center center;
 }
+
+
 
 .layout__main .page2__header .section1__header .search .form dl dt input[type="text"] {
     width: 100%;
     -webkit-border-radius: 30px 30px 30px 30px;
     -moz-border-radius: 30px 30px 30px 30px;
     border-radius: 30px 30px 30px 30px;
-    padding: 0px 235px 0px 60px;
+    padding: 0px 90px 0px 20px;
     border: 0;
     background-color: #ffffff;
     height: 50px;
@@ -4532,8 +4547,7 @@ html.fp-enabled,
 @media screen and (max-width: 568px) {
 
     .layout__main .page2__header .section1__header .search .form dl dt input[type="text"] {
-
-    padding: 0px 90px 0px 60px;}
+        padding: 0px 85px 0px 20px;}
 
 
     .layout__main .page2__main .section1 {
