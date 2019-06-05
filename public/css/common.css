@@ -6095,7 +6095,7 @@ html.fp-enabled,
     text-align: center; 
     padding: 20px 0 0;
     position: relative;
-    z-index: 6; }
+    z-index: 2; }
 
 .layout__main .page2__main .section4__main .info__paginator ul li {
     display: inline-block;
@@ -6126,7 +6126,6 @@ html.fp-enabled,
     font-size: 1.3em;
     font-weight: 400;
     color: #2197ae;
-    margin: 0 10px;
     cursor: pointer;
     -webkit-border-radius: 50% 50% 50% 50%;
     -moz-border-radius: 50% 50% 50% 50%;
@@ -6137,9 +6136,18 @@ html.fp-enabled,
     -o-transition: all 0.1s ease-in 0s;
     -ms-transition: all 0.1s ease-in 0s;
     transition: all 0.1s ease-in 0s;
-    width: 31px;
-    height: 31px;
+    width: 32px;
+    height: 32px;
+    position: relative;
+    top: -2px;
     color: white; }
+
+
+.layout__main .page2__main .section4__main .info__paginator ul li.active span {
+    position: relative;
+    top: 1px; }
+
+
 .layout__main .page2__main .section4__main .info__paginator ul li a.active:hover {
     background: #2197ae;
     color: white;
@@ -6163,7 +6171,10 @@ html.fp-enabled,
     position: relative; }
 @media screen and (max-width: 568px) {
     .layout__main .page2__main .questions {
-        height: 100%; } }
+        height: 100%; }
+    .layout__main .page2__main .section4__main .info__paginator ul li {
+        width: 27px;
+        } }
 @media screen and (min-width: 426px) and (max-width: 1024px) {
     .layout__main .page2__main .questions {
         height: auto; } }
@@ -8712,7 +8723,7 @@ li.page-item.active {
     background: #2197ae;
     color: white;
     font-size: 1.5em;
-    padding: 2px 9px;
+    padding: 2px 4px;
     border-radius: 50%;
 }
 
