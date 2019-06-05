@@ -6173,8 +6173,21 @@ html.fp-enabled,
     .layout__main .page2__main .questions {
         height: 100%; }
     .layout__main .page2__main .section4__main .info__paginator ul li {
-        width: 27px;
-        } }
+        width: 24px;
+        }
+    .layout__main .page2__main .section4__main .info__paginator ul li a{
+            font-size: .98em;
+            width: 26px;
+            height: 27px;
+        }
+        .layout__main .page2__main .section4__main .info__paginator ul li.active span{
+            left: -1px;
+        }
+        .layout__main .page2__main .section4__main .info__paginator ul li.active{
+            width: 24px;
+            height: 24px;
+            font-size: 1em;
+            }}
 @media screen and (min-width: 426px) and (max-width: 1024px) {
     .layout__main .page2__main .questions {
         height: auto; } }
