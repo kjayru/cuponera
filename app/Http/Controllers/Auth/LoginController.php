@@ -73,15 +73,18 @@ class LoginController extends Controller
 
         $cupusuario = CupUsuario::where('user_ndoc',$request->user_ndoc)->first();
 
+       
         $user = null;
         $success = true;
-
+        $negocio = false;
         $check = User::where('user_ndoc',$cupusuario->user_ndoc)->first();
 
         
         if($check) {
             $user = $check;
+          
         } else {
+            $negocio=true;
             \DB::beginTransaction();
             try {
                 $user = User::create([
@@ -91,18 +94,23 @@ class LoginController extends Controller
                 ]);
 
             } catch (\Exception $exception) {
-                $success = $exception->getMessage();
-                echo $success;
+                $error = $exception->getMessage();
+                dd($error);
                 \DB::rollBack();
             }
         }
 
-
+       
+       
         if($success === true) {
+           if($negocio===true){
             \DB::commit();
+           }
+          
             auth()->loginUsingId($user->id);
-            
-            return redirect(route('front.cupones'))->withInput($request->all);
+           
+            //return redirect()->route('front.cupones')->withInput($request->all);
+            return redirect()->route('front.cupones',['departamento'=>$request->departamento]);
         }
 
 

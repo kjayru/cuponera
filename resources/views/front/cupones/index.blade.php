@@ -59,12 +59,13 @@
                             </div>
                             <div class="info">
                                 <div class="info__list" id="list1">
-                                        @php $i = 0; @endphp
+                                   
+                                       
                                  @foreach($cupones as $cup)
 
                                     @if(!empty($cup->cupcupon->cupcategoria) && $cup->cupcupon->cup_estado==1)
                                    
-                                    @if($i<6)
+                                   
                                         
                                         <div class="element">
                                             <a href="/cupones/{{@$cup->cupcupon->cupcategoria->cat_alias}}/{{@$cup->cupcupon->cup_id}}/{{ \Illuminate\Support\Str::slug($cup->cupcupon->cup_titulo, '-') }}">
@@ -147,8 +148,8 @@
                                                 </div>--></a>
                                         </div>
                                         
-                                        @endif
-                                        @php $i++; @endphp
+                                        
+                                       
                                     @endif
                                    
                                  @endforeach

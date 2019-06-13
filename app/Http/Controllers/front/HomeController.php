@@ -19,7 +19,7 @@ class HomeController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth')->except('index');
+        $this->middleware('auth');
     }
     
     /**
@@ -27,51 +27,49 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
-        if(Auth::user()){
-            return redirect('cupones');
-        }else{
-            return redirect('login');
-        }
-
-    }
-
-    
-
+ 
     public function cupones(Request $request){
        
-      
-        if(!$request->session()->get('user_ndoc')) {
-            $request->session()->put('user_ndoc', old('user_ndoc'));
-            $request->session()->put('departamento', old('departamento'));
+      $user_id = Auth::id();
+      $dpto=null;
+
+        if(!$request->session()->get('departamento')) {
+            $request->session()->put('departamento', $request->departamento);
+            $dpto = $request->departamento;
+        }else{
+            $dpto = $request->session()->get('departamento');
+
         }
 
 
-        $ndoc = $request->session()->get('user_ndoc');
-        $dpto = $request->session()->get('departamento');
-
-        $usuario = CupUsuario::where('user_ndoc',$ndoc)->first();
+       
+       
+        $url=null;
+       
+        $usrlocal = User::find($user_id);
+        
+        $usuario = CupUsuario::where('user_ndoc',$usrlocal->user_ndoc)->first();
         
         $segmento = $usuario->cupsegmento->seg_id;
 
-
-        $i = $request->session()->get('conteo');
        
-        if(!empty($request->session()->get('url')['intended'])){ 
-            if(empty($i)){
-              $request->session()->put('conteo', "1");
-              return redirect($request->session()->get('url')['intended']);
-            }
-        }
-        $url = '';
-            $cupones = CupSegmentoCupon::where('seg_id',$segmento)->OrderBy('sc_orden','desc')->get();
+        
+       
+        
+            $cupones = CupSegmentoCupon::where('seg_id',$segmento)->OrderBy('sc_orden','desc')->take(6)->get();
           
+           
             $recomendados = CupCuponHome::OrderBy('ch_orden','asc')->get();
 
+           
+
             $categorias = CupCategoria::where('cat_estado','1')->OrderBy('cat_orden','asc')->get();
+            
+          
             $departamento = CupDepartamento::where('dep_id',$dpto)->first();
+
             $departamentos = CupDepartamento::all();
+           
 
             $url_slug = $_SERVER['REQUEST_URI'];
             $ur = explode("/",$url_slug);

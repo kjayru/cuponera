@@ -1,4 +1,5 @@
 <section class="section1">
+  
     <div class="section1__align">
   
         <div class="section1__header">
@@ -69,7 +70,7 @@
 
                 @endforeach
 
-
+              
             </div>
         </div>
     </div>

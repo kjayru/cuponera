@@ -10,7 +10,7 @@ class CupDepartamento extends Model
 
     public function cupcupones()
     {
-        return $this->hasMany(CupCupon::class);
+        return $this->hasMany(CupCupon::class,'dep_id','dep_id');
     }
 
     public function cupdepartamentocupones(){

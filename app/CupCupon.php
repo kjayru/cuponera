@@ -16,7 +16,7 @@ class CupCupon extends Model
         return $this->belongsTo(CupCategoria::class,'cat_id','cat_id');
     }
     public function cupdepartamento(){
-        return $this->belongsTo(CupDepartamento::class);
+        return $this->belongsTo(CupDepartamento::class,'dep_id','dep_id');
     }
 
     public function cupcuponhome(){

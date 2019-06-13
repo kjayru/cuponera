@@ -8,8 +8,8 @@ class CupSegmento extends Model
 {
     protected $table = "cup_segmentos";
 
-    public function cupsegmentocupones(){
-        return $this->hasMany(CupSegmento::class,'cup_id','cup_id');
+    public function cupsegmentocupons(){
+        return $this->hasMany(CupSegmentoCupon::class,'seg_id','seg_id');
     }
 
     public function cupusuario(){
