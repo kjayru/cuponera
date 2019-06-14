@@ -14,6 +14,9 @@ use App\User;
 use App\CupCupon;
 use App\CupSegmentoCupon;
 use App\Support\Collection;
+use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Support\Facades\DB;
+
 
 class HomeController extends Controller
 {
@@ -89,26 +92,23 @@ class HomeController extends Controller
        $id = Auth::id();
         $user = User::find($id);
         $segmento = $user->cupusuario->cupsegmento->seg_id;
+
+        
         $categoria = CupCategoria::where('cat_alias',$categoria)->first();
         $cat_id = $categoria->cat_id;
         $nombre = $categoria->cat_nombre;
-        $cupones = CupSegmentoCupon::where('seg_id',$segmento)->OrderBy('sc_orden','asc')->get();
 
-        foreach($cupones as $cupon){
-            if(!empty($cupon->cupcupon)) {
-                if($cupon->cupcupon->cat_id==$cat_id && $cupon->cupcupon->cup_estado=1){
-                    $matriz[] = $cupon->cupcupon;
-                }
-            }
-        }
+        $cupones = DB::table('cup_cupones')->where('cup_estado',1)->get();
+
+ 
         $url_slug = $_SERVER['REQUEST_URI'];
         $ur = explode("/",$url_slug);
         $url = $ur[2];
       
-        $collection = (new Collection($matriz))->paginate(9);
+       // $collection = (new Collection($matriz))->paginate(9);
         $categorias = CupCategoria::where('cat_estado','1')->OrderBy('cat_orden','asc')->get();
 
-        return view('front.cupones.categoria',['url_slug'=>$url,'cupones'=>$collection,'categorias'=>$categorias,'categoria_id'=>$categoria->cat_id,'cat_nombre'=>$nombre]);
+        return view('front.cupones.categoria',['url_slug'=>$url,'cupones'=>$cupones,'categorias'=>$categorias,'categoria_id'=>$categoria->cat_id,'cat_nombre'=>$nombre,'categoria'=>$categoria]);
     }
 
 
@@ -118,7 +118,7 @@ class HomeController extends Controller
         $ndoc = session()->get('user_ndoc');
 
         $usuario = CupUsuario::where('user_ndoc',$ndoc)->first();
-        $segmento = $usuario->cupsegmento->seg_id;
+        //$segmento = $usuario->cupsegmento->seg_id;
 
         $cupon = CupCupon::where('cup_id',$id)->first();
         //$recomendados = CupSegmentoCupon::where('seg_id',$segmento)->inRandomOrder()->limit(30)->get();

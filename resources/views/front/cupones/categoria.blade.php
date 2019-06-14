@@ -6,27 +6,8 @@
         <div class="section1">
             <div class="section1__align">
                 <div class="section1__header">
-                    <!--<div class="navigation">
-                        <ul>
-                            <li> <a href="/cupones">Inicio</a></li>
-
-                        </ul>
-                    </div>-->
-                    @guest
-                    @else <!--
-                    <div class="sesion">
-                       
-                      <button class="exit" 
-                         onclick="event.preventDefault();
-                             document.getElementById('logout-form').submit();">
-                         {{ __('Cerrar sesión') }}
-                    </button>
-                 
-                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                         @csrf
-                     </form>
-                    </div>-->
-                 @endguest
+                   
+                  
                 </div>
             </div>
         </div>
@@ -74,16 +55,20 @@
                         <div class="section4__main">
                             <div class="title">
                                 <h3> <strong>{{ @$cat_nombre }}</strong></h3>
-                               <!-- <h5>Mostrando 1 -  {{  $cupones->count() }} de   {{  $cupones->total() }} resultados</h5> -->
+                               
                             </div>
                             <div class="info">
-                                <div class="info__list"> <!--id="list5"-->
-                                    
+                                <div class="info__list"> 
+                                   
+           
+                                        
                                 @foreach($cupones as $cupon)
-                                    <div class="element"><a href="/cupones/{{$cupon->cupcategoria->cat_alias}}/{{$cupon->cup_id}}/{{ \Illuminate\Support\Str::slug($cupon->cup_titulo, '-') }}">
+                                   
+                                @if($cupon->cat_id==$categoria_id)
+                               
+                                    <div class="element"><a href="/cupones/{{@$categoria->cat_alias}}/{{$cupon->cup_id}}/{{ \Illuminate\Support\Str::slug($cupon->cup_titulo, '-') }}">
                                         <div class="element__image">
-                                            <!--<div class="logo"><img src="{{@$cupon->cupempresa->emp_logo}}" alt=""/></div>-->
-
+                                            
                                             <div class="image">
                                                 <img src="{{ @$cupon->cup_imagen }}" alt=""/>
                                             </div>
@@ -91,7 +76,7 @@
                                             <div class="content">
                                            
                                                
-                                                @switch($cupon->cupcategoria->cat_id)
+                                                @switch($cupon->cat_id)
                                                     @case(3)
                                                         <figure><img class="img_of" src="/assets/pg1_categoria6.svg" alt=""/>
                                                         <img src="/assets/pg1_categoria6_on.svg" alt=""/></figure>
@@ -135,23 +120,17 @@
                                                 </figcaption>
                                             </div>
                                         </div>
-                                        <!--<div class="element__info">
-                                            <div class="content">
-                                               
-                                            </div>
-                                        </div>-->
+                                       
                                         </a>
                                     </div>
-
+                                    @endif
                                  @endforeach
 
 
                                 </div>
 
                                 
-                                <div class="info__paginator">
-                                    {{ $cupones->onEachSide(1)->links() }}
-                                </div>
+                            
                             </div>
                         </div>
                     </div>
