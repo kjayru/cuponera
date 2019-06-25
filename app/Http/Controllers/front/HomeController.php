@@ -98,9 +98,9 @@ class HomeController extends Controller
         $cat_id = $categoria->cat_id;
         $nombre = $categoria->cat_nombre;
 
-        $cupones = DB::table('cup_cupones')->where('cup_estado',1)->get();
-
- 
+        $cupones = DB::table('cup_cupones')->where('cat_id',$cat_id)->where('cup_estado','1')->get();
+      
+        
         $url_slug = $_SERVER['REQUEST_URI'];
         $ur = explode("/",$url_slug);
         $url = $ur[2];
