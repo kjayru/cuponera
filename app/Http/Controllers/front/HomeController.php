@@ -30,7 +30,9 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
- 
+    public function index(){
+        
+    }
     public function cupones(Request $request){
        
       $user_id = Auth::id();
