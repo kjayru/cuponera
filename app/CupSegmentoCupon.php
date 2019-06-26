@@ -3,9 +3,10 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-
+use GeneaLabs\LaravelModelCaching\Traits\Cachable;
 class CupSegmentoCupon extends Model
 {
+    use  Cachable;
     protected $table = "cup_segmento_cupon";
 
     protected $fillable = [

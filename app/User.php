@@ -5,10 +5,10 @@ namespace App;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-
+use GeneaLabs\LaravelModelCaching\Traits\Cachable;
 class User extends Authenticatable
 {
-    use Notifiable;
+    use Notifiable, Cachable;
 
     /**
      * The attributes that are mass assignable.
@@ -16,7 +16,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'user_ndoc', 'email','password',
+        'name', 'user_ndoc', 'seg_nombre','email','password',
     ];
 
     /**
@@ -28,6 +28,9 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
+    public function cupsegmento(){
+        return $this->belongsTo(CupSegmento::class,'seg_nombre','seg_nombre');
+    }
 
     public function cupusuario(){
         return $this->hasOne(CupUsuario::class,'user_ndoc','user_ndoc');

@@ -8,6 +8,7 @@ use App\Http\Controllers\CuponController;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
+
 use App\CupUsuario;
 use App\CupDepartamento;
 use App\User;
@@ -18,8 +19,11 @@ use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Facades\DB;
 
 
+
 class HomeController extends Controller
 {
+    
+
     public function __construct()
     {
         $this->middleware('auth');
@@ -31,7 +35,7 @@ class HomeController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index(){
-        
+
     }
     public function cupones(Request $request){
        
@@ -53,7 +57,7 @@ class HomeController extends Controller
        
         $usrlocal = User::find($user_id);
         
-        $usuario = CupUsuario::where('user_ndoc',$usrlocal->user_ndoc)->first();
+        $usuario = User::where('user_ndoc',$usrlocal->user_ndoc)->first();
         
         $segmento = $usuario->cupsegmento->seg_id;
 
@@ -93,14 +97,14 @@ class HomeController extends Controller
 
        $id = Auth::id();
         $user = User::find($id);
-        $segmento = $user->cupusuario->cupsegmento->seg_id;
-
+        $segmento = $user->cupsegmento->seg_id;
+        
         
         $categoria = CupCategoria::where('cat_alias',$categoria)->first();
         $cat_id = $categoria->cat_id;
         $nombre = $categoria->cat_nombre;
 
-        $cupones = DB::table('cup_cupones')->where('cat_id',$cat_id)->where('cup_estado','1')->get();
+        $cupones = DB::table('cup_cupones')->where('cat_id',$cat_id)->where('cup_estado','1')->paginate(9);
       
         
         $url_slug = $_SERVER['REQUEST_URI'];

@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Validation\ValidationException;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\DB;
 use App\CupUsuario;
 use App\CupDepartamento;
 use App\CupDepartamentoCupon;
@@ -71,26 +72,28 @@ class LoginController extends Controller
             return redirect()->route('login')->with('info','Complete los campos correctamente');
         }
 
-        $cupusuario = CupUsuario::where('user_ndoc',$request->user_ndoc)->first();
-
+        
        
         $user = null;
         $success = true;
         $negocio = false;
-        $check = User::where('user_ndoc',$cupusuario->user_ndoc)->first();
+        $check = User::where('user_ndoc',$request->user_ndoc)->first();
 
         
         if($check) {
             $user = $check;
           
         } else {
+            //$cupusuario = CupUsuario::where('user_ndoc',$request->user_ndoc)->first();
+            $cupusuario = DB::connection('mysql2')->table('cup_usuarios')->where('user_ndoc',$request->user_ndoc)->first();
+            
             $negocio=true;
             \DB::beginTransaction();
             try {
                 $user = User::create([
                     "name" => $cupusuario->user_nombres,
                     "user_ndoc" => $cupusuario->user_ndoc,
-                    //"email" => $cupusuario->user_email
+                    "seg_nombre" => $cupusuario->seg_nombre
                 ]);
 
             } catch (\Exception $exception) {
