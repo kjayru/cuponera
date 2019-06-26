@@ -40,9 +40,9 @@
             </div>
         </div>
     </div>
-
-    <div class="content_detail_image">
-        <img src="{{ $cupon->cup_imagen }}" alt=""/>
+   
+    <div class="content_detail_image" style="background: url('{{$cupon->cupimagencupones[0]->ic_img}}') no-repeat center -270px;background-size:cover;">
+        <!--<img src="{{ $cupon->cup_imagen }}" alt=""/>-->
     </div>
 
     <div class="layout__main">

@@ -29,7 +29,7 @@ class CupCupon extends Model
     }
 
     public function cupimagencupones(){
-        return $this->hasMany(CupImagenCupon::class);
+        return $this->hasMany(CupImagenCupon::class,'cup_id','cup_id');
     }
 
     public function cupsegmentocupon(){
