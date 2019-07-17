@@ -8758,6 +8758,15 @@ li.page-item.active {
    width: 150px;
 }
 
+@media(max-width:678px){
+    .content_detail_image {
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+        height: 294px;
+        background-position: center 0 !important;
+    }
+}
 @media print {
 
     #image_print {
@@ -8790,6 +8799,7 @@ li.page-item.active {
     color-adjust: exact;
     }
 
-    .layout__main .page3__main .section1__main .content__header .info p {
+    .layout__main .page3__main .section1__main .content__header .info p{
         padding: 0 0 3px 0;
+    }
 }
