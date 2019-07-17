@@ -3682,7 +3682,7 @@ html.fp-enabled,
 .layout__main .page1__header .section1__header .login .form__info p {
     font-size: 1.2em;
     color: white;
-    max-width: 400px
+    max-width: 400px;
     width: 100%;
     margin: auto;
     text-align: left;
@@ -4748,7 +4748,8 @@ html.fp-enabled,
         transform: translate(-50%, -50%) scale(1.3);
         -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=${ieopacidad})";
         filter: alpha(opacity=${ieopacidad});
-        opacity: 0; } }
+        opacity: 0; } 
+    }
 .layout__main .page2__main .section1__header .list__item .category {
     width: 96px;
     height: 96px;
