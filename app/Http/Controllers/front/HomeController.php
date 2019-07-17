@@ -50,31 +50,21 @@ class HomeController extends Controller
 
         }
 
-
-       
        
         $url=null;
        
         $usrlocal = User::find($user_id);
         
         $usuario = User::where('user_ndoc',$usrlocal->user_ndoc)->first();
-        
+       
         $segmento = $usuario->cupsegmento->seg_id;
 
-       
-        
-       
-        
             $cupones = CupSegmentoCupon::where('seg_id',$segmento)->OrderBy('sc_orden','desc')->take(6)->get();
-          
-           
+               
             $recomendados = CupCuponHome::OrderBy('ch_orden','asc')->get();
 
-           
-
             $categorias = CupCategoria::where('cat_estado','1')->OrderBy('cat_orden','asc')->get();
-            
-          
+                 
             $departamento = CupDepartamento::where('dep_id',$dpto)->first();
 
             $departamentos = CupDepartamento::all();

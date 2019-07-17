@@ -79,7 +79,7 @@ class LoginController extends Controller
         $negocio = false;
         $check = User::where('user_ndoc',$request->user_ndoc)->first();
 
-        
+            
         if($check) {
             $user = $check;
           
