@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/', 'front\HomeController@index')->name('front.home');
+Route::get('/', 'Auth\LoginController@showLoginForm')->name('front.home');
 
 Route::post('login/verify', 'Auth\LoginController@verify')->name('claro_auth');
 Route::get('/cupones', 'front\HomeController@cupones')->name('front.cupones');

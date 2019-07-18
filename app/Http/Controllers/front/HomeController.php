@@ -8,7 +8,7 @@ use App\Http\Controllers\CuponController;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
-
+use Session;
 use App\CupUsuario;
 use App\CupDepartamento;
 use App\User;
@@ -38,7 +38,11 @@ class HomeController extends Controller
 
     }
     public function cupones(Request $request){
-       
+
+       if(!empty($request->session()->get('url')['intended'])){
+         return redirect($request->session()->get('url')['intended']);
+       }
+
       $user_id = Auth::id();
       $dpto=null;
 
@@ -110,7 +114,7 @@ class HomeController extends Controller
 
 
     public function detalle($categoria,$id,$slug){
-        
+        session()->forget('url');
         $ndoc = session()->get('user_ndoc');
 
         $usuario = CupUsuario::where('user_ndoc',$ndoc)->first();

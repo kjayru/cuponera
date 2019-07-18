@@ -14,6 +14,7 @@ use App\CupDepartamento;
 use App\CupDepartamentoCupon;
 use App\CupCupon;
 use App\User;
+use Session;
 class LoginController extends Controller
 {
     /*
@@ -50,13 +51,8 @@ class LoginController extends Controller
     public function showLoginForm()
     {
         $departamentos = CupDepartamento::all();
-
         return view('auth.login',['departamentos'=>$departamentos]);
     }
-
-
-
-
 
     protected function verify(Request $request)
     {
@@ -112,8 +108,9 @@ class LoginController extends Controller
           
             auth()->loginUsingId($user->id);
            
+           // return redirect()->intended();
             //return redirect()->route('front.cupones')->withInput($request->all);
-            return redirect()->route('front.cupones',['departamento'=>$request->departamento]);
+            return redirect()->route('front.cupones',['departamento'=>$request->departamento])->withInput($request->all);
         }
 
 

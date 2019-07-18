@@ -15,24 +15,15 @@
     <div class="layout__main">
         <div class="page2">
             <div class="page2__header">
-
                 <section class="section1">
                     <div class="section1__align">
-                        <div class="section1__header">
-                            
+                        <div class="section1__header">                          
                             <div class="search search-category">
-
                                     @include('front.cupones.form.search-type-2')
-
                             </div>
-
                         </div>
                     </div>
-
-
                 </section>
-
-
             </div>
             <div class="page2__main">
 
