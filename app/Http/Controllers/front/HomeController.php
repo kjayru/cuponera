@@ -34,17 +34,15 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(){
-
-    }
+   
     public function cupones(Request $request){
+        $user_id = Auth::id();
+        $dpto=null;
+        $url=null; 
 
-       if(!empty($request->session()->get('url')['intended'])){
-         return redirect($request->session()->get('url')['intended']);
-       }
-
-      $user_id = Auth::id();
-      $dpto=null;
+        if(!empty($request->session()->get('url')['intended'])){
+            return redirect($request->session()->get('url')['intended']);
+        }
 
         if(!$request->session()->get('departamento')) {
             $request->session()->put('departamento', $request->departamento);
@@ -53,14 +51,9 @@ class HomeController extends Controller
             $dpto = $request->session()->get('departamento');
 
         }
-
-       
-        $url=null;
-       
-        $usrlocal = User::find($user_id);
-        
-        $usuario = User::where('user_ndoc',$usrlocal->user_ndoc)->first();
-       
+      
+        $usrlocal = User::find($user_id);       
+        $usuario = User::where('user_ndoc',$usrlocal->user_ndoc)->first();      
         $segmento = $usuario->cupsegmento->seg_id;
 
             $cupones = CupSegmentoCupon::where('seg_id',$segmento)->OrderBy('sc_orden','desc')->take(6)->get();
@@ -79,10 +72,8 @@ class HomeController extends Controller
             if(!empty($ur[2])){
                 $url = $ur[2];
             }
-           
 
-            return view('front.cupones.index',['url_slug'=>$url,'categorias'=>$categorias,'recomendados'=>$recomendados,'cupones'=>$cupones,'departamento'=>$departamento,'departamentos'=>$departamentos]);
-
+        return view('front.cupones.index',['url_slug'=>$url,'categorias'=>$categorias,'recomendados'=>$recomendados,'cupones'=>$cupones,'departamento'=>$departamento,'departamentos'=>$departamentos]);
 
     }
 
