@@ -81,7 +81,7 @@
                                                     @endif
                                                 </dl> 
                                                 <dl class="row1">
-                                                    <dt>    
+                                                    <dt class="type-robot">    
                                                         <label class="form__label1">No soy un robot <span>{{ app('mathcaptcha')->label() }}</span></label>
                                                         <!--<input class="form__text1" type="text" name="captcha" />-->
                                                         {!! app('mathcaptcha')->input() !!}

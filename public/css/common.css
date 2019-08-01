@@ -4107,7 +4107,6 @@ background-position: center 0 !important;
             font-size: 0.9em;
             }
     .layout__main .page1__header .section1__header .login .form dl.row1 dt input {
-        width: 60px !important;
         position: relative;
     top: -3px;
         }}
@@ -5921,7 +5920,18 @@ background-position: center 0 !important;
         width: 100%;
         max-width: 290px;
         margin: 0px;
-        display: block; } }
+        display: block; }
+    .type-robot label{
+        position: relative;
+        top: 3px;
+        }
+    .type-robot input {
+        padding: 5px 5px !important;
+        height: auto !important;
+        top: initial !important;
+        line-height: initial !important;
+        width: 45px !important;
+        }}
 .layout__main .page2__main .section4__main .info__list .element__image {
     -webkit-flex-shrink: 1;
     -moz-flex-shrink: 1;
