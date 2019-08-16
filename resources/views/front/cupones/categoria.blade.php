@@ -103,7 +103,8 @@
                                                     @break
                                                 @endswitch 
                                                 <figcaption>
-                                                    <h4>{{@$cupon->cupcategoria->cat_nombre}}</h4>
+                                                    
+                                                    <h4>{{@$categoria->cat_nombre}}</h4>
                                                     <h3>{{@$cupon->cupempresa->emp_nombre}}</h3>
                                                     <p> 
                                                         {{ \Illuminate\Support\Str::limit(strip_tags($cupon->cup_titulo ),75)}}
