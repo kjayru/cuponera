@@ -50,26 +50,17 @@
             <div class="page3__main">
                 <section class="section1">
                     <div class="section1__align">
-                        <!--
-                        <div class="bg_category">
-                            <img src="../../../assets/detail_bg_1.svg" alt=""/>
-                        </div>
-
-                        <div class="share">
-                            <img src="../../../assets/share.svg" alt=""/>
-                            <img src="../../../assets/favorite.svg" alt=""/>
-                        </div>-->
+                       
 
                         <div class="category_detail">
                             <span>{{ \Illuminate\Support\Str::title($cupon->cupcategoria->cat_nombre) }}</span>
                         </div>
                         <div class="section1__main">
 
-                           <!-- <div class="links"><a href="{{ url()->previous() }}">< Volver</a></div>-->
+                          
                             <div class="content">
                                 <div class="content__header">
-                                    <!--
-                                    <div class="image"><img src="{{ $cupon->cup_imagen }}" alt=""/></div>-->
+                                    
                                     <div class="info">
                                         <h5>{{ $cupon->cupempresa->emp_nombre }}</h5>
                                         <h4>{{ $cupon->cup_descripcion_corta }}</h4>
@@ -99,14 +90,10 @@
                                 <div class="content__main">
                                     <div class="buttons">
                                         <button class="button" onclick="javascript:window.print();">Lo quiero</button>
-                                       <!-- <button class="button">Enviar por e-mail</button>-->
+                                      
                                     </div>
 
-                                    <!--
-                                    <div class="info">
-                                        <h5>Cupón valido: del {{ $cupon->cup_vigencia_inicio }} al {{ $cupon->cup_vigencia_fin }}</h5>
-                                        <p>{!! $cupon->cup_legal   !!} </p>
-                                    </div> -->
+                                  
                                 </div>
                             </div>
                         </div>

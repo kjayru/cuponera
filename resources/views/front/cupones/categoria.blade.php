@@ -5,9 +5,7 @@
     <div class="layout__header">
         <div class="section1">
             <div class="section1__align">
-                <div class="section1__header">
-                   
-                  
+                <div class="section1__header">                       
                 </div>
             </div>
         </div>
@@ -117,8 +115,6 @@
                                     </div>
                                     @endif
                                  @endforeach
-
-
                                 </div>
 
                                 <div class="info__paginator">
@@ -128,7 +124,6 @@
                         </div>
                     </div>
                 </section>
-
 
                 <section class="section5">
                     <div class="section5__align">
@@ -144,16 +139,13 @@
                                         <h3>¡Qué esperas!</h3>
                                         <span> Se parte del club, descarga la App en:</span>
                                     </div>
-                                    <div class="link">
-                                        
+                                    <div class="link">                                       
                                         <a href="https://itunes.apple.com/pe/app/claro-club/id1343890516?mt=8" target="_blank">
                                             <img  src="{{ url('assets/app_store.svg')}}" alt="" />
                                         </a>
-
                                         <a href="https://play.google.com/store/apps/details?id=com.claro.claroclub" target="_blank">
                                             <img  src="{{ url('assets/play_store.svg')}}" alt="" />
                                         </a>
-
                                     </div>
                                 </div>
                             </div>
