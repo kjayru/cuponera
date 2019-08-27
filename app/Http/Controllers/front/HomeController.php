@@ -144,12 +144,9 @@ class HomeController extends Controller
         $empresas = CupEmpresa::where('emp_nombre','like','%'.$request->search.'%')->get();
        
        
+      
        
-       /* if(!empty($empresas)){
-           
-                $cupempresa = $empresa->cupcupons;
-            
-        }*/
+
         if(!empty($cupons)){
             $merged = $contenedor->merge($cupons);
             $merged->all();
@@ -160,8 +157,10 @@ class HomeController extends Controller
         }
         if(!empty($empresas)){
             foreach($empresas as $emp){
-            $merged = $contenedor->merge($emp->cupcupons);
-            $merged->all();
+                if(count($emp->cupcupons)>0){
+                    $merged = $contenedor->merge($emp->cupcupons);
+                    $merged->all();
+                }
             }
         }
         
