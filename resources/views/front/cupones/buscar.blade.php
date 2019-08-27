@@ -79,8 +79,8 @@
                                     <div class="info__list" >
 
                                         @foreach($cupones as $cupon)
-
-                                            <div class="element"><a href="/cupones/{{$cupon->cupcategoria->cat_alias}}/{{$cupon->cup_id}}/{{ \Illuminate\Support\Str::slug($cupon->cup_titulo, '-') }}">
+                                            
+                                             <div class="element"><a href="/cupones/{{$cupon->cupcategoria->cat_alias}}/{{$cupon->cup_id}}/{{ \Illuminate\Support\Str::slug($cupon->cup_titulo, '-') }}">
                                                     <div class="element__image">
                                                         <!--<div class="logo"><img src="{{@$cupon->cupempresa->emp_logo}}" alt=""/></div>-->
                                                         <div class="image">
@@ -140,8 +140,8 @@
                                                         </div>
                                                     </div>-->
                                                 </a>
-                                            </div>
-
+                                             </div>
+                                            
                                         @endforeach
 
 

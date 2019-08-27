@@ -17,7 +17,8 @@ use App\CupSegmentoCupon;
 use App\Support\Collection;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Facades\DB;
-
+use App\CupEmpresa;
+use Illuminate\Support\Str;
 
 
 class HomeController extends Controller
@@ -58,14 +59,17 @@ class HomeController extends Controller
 
             $cupones = CupSegmentoCupon::where('seg_id',$segmento)->OrderBy('sc_orden','desc')->take(6)->get();
                
+            
             $recomendados = CupCuponHome::OrderBy('ch_orden','asc')->get();
-
+            
             $categorias = CupCategoria::where('cat_estado','1')->OrderBy('cat_orden','asc')->get();
                  
             $departamento = CupDepartamento::where('dep_id',$dpto)->first();
 
             $departamentos = CupDepartamento::all();
            
+            /*$destacados = CupCupon::where('cup_destacado',1)->where('cup_estado',1)->get();
+            dd($destacados);*/
 
             $url_slug = $_SERVER['REQUEST_URI'];
             $ur = explode("/",$url_slug);
@@ -120,18 +124,53 @@ class HomeController extends Controller
 
 
     public function buscar(Request $request){
-       
+        $cupons = null;
+        $cupons2 = null;
+        $cupempresa = null;
+        $merged = null;
+        
+        $contenedor = new Collection;
         $categorias = CupCategoria::where('cat_estado','1')->OrderBy('cat_orden','asc')->get();
 
-        $cupons = CupCupon::where('cup_titulo','like','%'.$request->search.'%')
-                            ->orWhere('cup_descripcion_larga','like','%'.$request->search.'%')->paginate(9);
-
-        $resultados = count($cupons);
+        $cupon2 = CupCupon::where('cup_estado','1')
+                            ->where('cup_titulo','like','%'.$request->search.'%')
+                           ->get();
+       
+        $cupons = CupCupon::where('cup_estado','1')
+                            ->where('cup_descripcion_larga','like','%'.$request->search.'%')
+                            ->get();
+        
+                            
+        $empresa = CupEmpresa::where('emp_nombre','like','%'.$request->search.'%')->first();
+        if(!empty($empresa)){
+         $cupempresa = $empresa->cupcupons;
+        }
+        if(!empty($cupons)){
+            $merged = $contenedor->merge($cupons);
+            $merged->all();
+        }
+        if(!empty($cupons2)){
+            $merged = $contenedor->merge($cupons2);
+            $merged->all();
+        }
+        if(!empty($cupempresa)){
+            $merged = $contenedor->merge($cupempresa);
+            $merged->all();
+        }
+        
+       
+       
+        $resultados = count($merged);
+         /*$resultCupones = $cupons2->merge($cupons);
+        dd($resultCupones);*/
 
         $recomendados = CupCuponHome::OrderBy('ch_orden','asc')->get();
 
-        $cupons->appends(['search' => $request->search]);
-        return view('front.cupones.buscar',['recomendados'=>$recomendados,'cupones'=>$cupons,'categorias'=>$categorias,'resultados'=>$resultados]);
+         $cuponesis = $merged->paginate(9);
+        $cuponesis->appends(['search' => $request->search]);
+
+       
+        return view('front.cupones.buscar',['recomendados'=>$recomendados,'cupones'=>$cuponesis,'categorias'=>$categorias,'resultados'=>$resultados]);
     }
 
 
