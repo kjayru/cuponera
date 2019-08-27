@@ -130,6 +130,8 @@ class HomeController extends Controller
         $merged = null;
         
         $contenedor = new Collection;
+        
+      
         $categorias = CupCategoria::where('cat_estado','1')->OrderBy('cat_orden','asc')->get();
 
         $cupon2 = CupCupon::where('cup_estado','1')
@@ -142,40 +144,84 @@ class HomeController extends Controller
         
                        
         $empresas = CupEmpresa::where('emp_nombre','like','%'.$request->search.'%')->get();
-       
-       
       
        
-
-        if(!empty($cupons)){
-            $merged = $contenedor->merge($cupons);
-            $merged->all();
+        if(count($empresas)==0 && count($cupons)>0 && count($cupon2)==0){
+            $concatena = $contenedor->concat($cupons);
+           
+            $concatena->all();
         }
-        if(!empty($cupons2)){
-            $merged = $contenedor->merge($cupons2);
-            $merged->all();
+        if(count($empresas)==0 && count($cupons)>0 && count($cupon2)>0){
+            $concatena = $contenedor->concat($cupon2)->concat($cupons);
+           
+           
+            $concatena->all();
+            
         }
-        if(!empty($empresas)){
+        if(count($empresas)>0 && count($cupons)>0 && count($cupon2)>0){
+           
             foreach($empresas as $emp){
-                if(count($emp->cupcupons)>0){
-                    $merged = $contenedor->merge($emp->cupcupons);
-                    $merged->all();
+               if(count($empresas)>0){
+                    $concatena  = $contenedor->concat($emp->cupcupons)->concat($cupons);
                 }
             }
+            $concatena->all();
         }
+
+        if(count($empresas)>0 && count($cupons)==0 && count($cupon2)>0){
+            
+            foreach($empresas as $emp){
+               if(count($empresas)>0){
+                    $concatena  = $contenedor->concat($emp->cupcupons)->concat($cupon2);
+                }
+            }
+            $concatena->all();
+        }
+
+        if(count($empresas)>0 && count($cupons)>0 && count($cupon2)==0){
+            
+            foreach($empresas as $emp){
+               if(count($empresas)>0){
+                    $concatena  = $contenedor->concat($emp->cupcupons)->concat($cupons);
+                }
+            }
+            $concatena->all();
+        }
+
+
+        if(count($empresas)>0 && count($cupons)==0 && count($cupon2)==0){
+          
+            foreach($empresas as $emp){
+               if(count($empresas)>0){
+                    $concatena  = $contenedor->concat($cupons);
+                }
+            }
+            $concatena->all();
+        }
+
+        if(count($empresas)==0 && count($cupons)==0 && count($cupon2)>0){
+           
+           
+                    $concatena  = $contenedor->concat($cupon2);
+               
+            
+            $concatena->all();
+        }
+
+       
+       
+        $resultados = $concatena->count();
+
         
-  
-        $resultados = count($merged);
-         /*$resultCupones = $cupons2->merge($cupons);
-        dd($resultCupones);*/
+       
 
         $recomendados = CupCuponHome::OrderBy('ch_orden','asc')->get();
 
-         $cuponesis = $merged->paginate(9);
-        
+         $cuponesis = $concatena->paginate(9);
+          
         $cuponesis->appends(['search' => $request->search]);
 
-       
+        
         return view('front.cupones.buscar',['recomendados'=>$recomendados,'cupones'=>$cuponesis,'categorias'=>$categorias,'resultados'=>$resultados]);
     }
 
