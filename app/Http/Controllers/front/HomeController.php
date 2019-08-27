@@ -136,11 +136,11 @@ class HomeController extends Controller
                             ->where('cup_titulo','like','%'.$request->search.'%')
                            ->get();
        
-        $cupons = CupCupon::where('cup_estado','1')
-                            ->where('cup_descripcion_larga','like','%'.$request->search.'%')
+        $cupons = CupCupon::where('cup_descripcion_larga','like','%'.$request->search.'%')
+                            ->where('cup_estado','1')
                             ->get();
         
-                            
+                       
         $empresa = CupEmpresa::where('emp_nombre','like','%'.$request->search.'%')->first();
         if(!empty($empresa)){
          $cupempresa = $empresa->cupcupons;
@@ -154,12 +154,12 @@ class HomeController extends Controller
             $merged->all();
         }
         if(!empty($cupempresa)){
+           
             $merged = $contenedor->merge($cupempresa);
             $merged->all();
         }
         
-       
-       
+  
         $resultados = count($merged);
          /*$resultCupones = $cupons2->merge($cupons);
         dd($resultCupones);*/
@@ -167,6 +167,7 @@ class HomeController extends Controller
         $recomendados = CupCuponHome::OrderBy('ch_orden','asc')->get();
 
          $cuponesis = $merged->paginate(9);
+        
         $cuponesis->appends(['search' => $request->search]);
 
        

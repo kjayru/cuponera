@@ -35,4 +35,15 @@ class CupCupon extends Model
     public function cupsegmentocupon(){
         return $this->hasOne(CupSegmentoCupon::class,'cup_id','cup_id');
     }
+
+    public static function cup($cupones){
+       
+        foreach($cupones as $cupon){
+            if($cupon->cup_estado==1){
+                return $cupon;
+            }
+        }
+        
+    }
 }
+

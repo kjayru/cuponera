@@ -10,6 +10,6 @@ class CupEmpresa extends Model
     protected $table = "cup_empresas";
 
     public function cupcupons(){
-        return $this->hasMany(CupCupon::class,'emp_id','emp_id');
+        return $this->hasMany(CupCupon::class,'emp_id','emp_id')->where('cup_cupones.cup_estado', '1');
     }
 }
