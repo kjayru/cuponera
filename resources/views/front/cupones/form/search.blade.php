@@ -23,7 +23,7 @@
     <div class="form__row1">
         <div class="form__info">
 
-            <p id="btnCambiar"><a id="m_mb" name="{{ @$cat_nombre }}" ></a>Mostrar cupones disponibles en <span class="departmento">Lima</span><!--<a id="btnCambiar">Cambiar</a>--></p>
+            <p id="btnCambiar"><a id="m_mb" name="{{ @$cat_nombre }}" ></a>Cupones en  <span class="departmento">Lima</span><!--<a id="btnCambiar">Cambiar</a>--></p>
 
         </div>
 

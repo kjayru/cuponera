@@ -10,7 +10,7 @@
                                 <div class="content">
                                     <div class="data">
                                         <div class="title">
-                                            <h2>Elige un Departamento y verás los <br/>  beneficios que tenemos para ti.</h2>
+                                            <h2>Elige un departamento y verás los <br/>  beneficios que tenemos para ti.</h2>
                                         </div>
                                         <div class="list">
                                             <ul>

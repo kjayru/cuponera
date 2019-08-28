@@ -3148,7 +3148,7 @@ html.fp-enabled,
 
 
 .bottom_layout .list ul li a:hover {
-    color: #2197ae;
+    color: #0FBDDF;
     transition: 0.2s ease-out; }
 
 
@@ -3257,7 +3257,7 @@ background-position: center 0 !important;
     text-align: center;
     border-radius: 20px;
     cursor: pointer;
-    background: #2197ae; }
+    background: #0FBDDF; }
 
 
  .layout__header .section1__header .navigation ul li a{
@@ -3314,7 +3314,7 @@ background-position: center 0 !important;
 .layout__header .section1__header .navigation.view ul li a:hover {
     text-decoration: underline; }
 .layout__header .section1__header .navigation.view ul li:last-child a {
-    color: #2197ae; }
+    color: #0FBDDF; }
 .layout__header .section1__header .navigation.view_cupon {
     padding: 0;
     display: table-cell;
@@ -3340,7 +3340,7 @@ background-position: center 0 !important;
 .layout__header .section1__header .navigation.view_cupon ul li a:hover {
     text-decoration: underline; }
 .layout__header .section1__header .navigation.view_cupon ul li:last-child a {
-    color: #2197ae; }
+    color: #0FBDDF; }
 .layout__header .section1__header .sesion {
     text-align: right; }
 @media screen and (max-width: 425px) {
@@ -3683,7 +3683,7 @@ background-position: center 0 !important;
 .layout__main .page1__header .section1__header .login .form__info h3 span {
     color: #da272c; }
 .layout__main .page1__header .section1__header .login .form__info p {
-    font-size: 1.2em;
+    font-size: 1.32em;
     color: white;
     max-width: 400px;
     width: 100%;
@@ -4063,7 +4063,7 @@ background-position: center 0 !important;
     color: #ffffff;
     cursor: pointer;
     text-align: center;
-    background-color: #0097ae;
+    background-color: #0FBDDF;
     padding: 10px 35px 10px 35px;
     border: none;
     display: table;
@@ -4253,7 +4253,7 @@ background-position: center 0 !important;
 .layout__main .page1__header .section1__header .menu__list a {
     font-size: 1.125em;
     font-weight: 400;
-    color: #2197ae;
+    color: #0FBDDF;
     position: relative;
     cursor: pointer;
     display: block; }
@@ -4385,7 +4385,7 @@ background-position: center 0 !important;
     .layout__main .page2__header .section1__header .search .form__info p {
         font-size: 0.9375em; } }
 .layout__main .page2__header .section1__header .search .form__info p a {
-    color: #2197ae;
+    color: #0FBDDF;
     cursor: pointer; }
 .layout__main .page2__header .section1__header .search .form__fields {
     position: relative; }
@@ -4435,7 +4435,7 @@ background-position: center 0 !important;
     font-size: 1.125em;
     color: #ffffff;
     text-align: center;
-    background-color: #0097ae;
+    background-color: #0FBDDF;
     padding: 10px 35px 10px 20px;
     border: none;
     display: table;
@@ -4493,7 +4493,7 @@ background-position: center 0 !important;
     background-color: red;
     height: 48px;
     line-height: 48px;
-    background: #2197ae;
+    background: #0FBDDF;
     background: url("../assets/search_icon.svg") no-repeat center center;
 }
 
@@ -5230,7 +5230,7 @@ background-position: center 0 !important;
     font-weight: 400;
     color: #000000; }
 .layout__main .page2__main .section2__main .info__list .element__info .content p a {
-    color: #2197ae; }
+    color: #0FBDDF; }
 @media screen and (max-width: 568px) {
     .layout__main .page2__main .section2__main .info__list .element__info .content p br {
         display: none; } }
@@ -5720,7 +5720,7 @@ background-position: center 0 !important;
     font-weight: 400;
     color: #000000; }
 .layout__main .page2__main .section3__main .info__list .element__info .content p a {
-    color: #2197ae; }
+    color: #0FBDDF; }
 @media screen and (max-width: 568px) {
     .layout__main .page2__main .section3__main .info__list .element__info .content p br {
         display: none; } }
@@ -6105,7 +6105,7 @@ background-position: center 0 !important;
     font-weight: 400;
     color: #000000; }
 .layout__main .page2__main .section4__main .info__list .element__info .content p a {
-    color: #2197ae; }
+    color: #0FBDDF; }
 @media screen and (max-width: 568px) {
     .layout__main .page2__main .section4__main .info__list .element__info .content p br {
         display: none; } }
@@ -6125,7 +6125,7 @@ background-position: center 0 !important;
 .layout__main .page2__main .section4__main .info__paginator ul li a {
     font-size: 1.3em;
     font-weight: 400;
-    color: #2197ae;
+    color: #0FBDDF;
     line-height: 31px;
     cursor: pointer;
     -webkit-border-radius: 50% 50% 50% 50%;
@@ -6140,10 +6140,10 @@ background-position: center 0 !important;
     width: 31px;
     height: 31px; }
 .layout__main .page2__main .section4__main .info__paginator ul li.active {
-    background: #2197ae;
+    background: #0FBDDF;
     font-size: 1.3em;
     font-weight: 400;
-    color: #2197ae;
+    color: #0FBDDF;
     cursor: pointer;
     -webkit-border-radius: 50% 50% 50% 50%;
     -moz-border-radius: 50% 50% 50% 50%;
@@ -6167,7 +6167,7 @@ background-position: center 0 !important;
 
 
 .layout__main .page2__main .section4__main .info__paginator ul li a.active:hover {
-    background: #2197ae;
+    background: #0FBDDF;
     color: white;
     -webkit-transition: all 0.1s ease-in 0s;
     -moz-transition: all 0.1s ease-in 0s;
@@ -6175,7 +6175,7 @@ background-position: center 0 !important;
     -ms-transition: all 0.1s ease-in 0s;
     transition: all 0.1s ease-in 0s; }
 .layout__main .page2__main .section4__main .info__paginator a:hover {
-    background: #2197ae;
+    background: #0FBDDF;
     color: white;
     -webkit-transition: all 0.1s ease-in 0s;
     -moz-transition: all 0.1s ease-in 0s;
@@ -6275,9 +6275,9 @@ background-position: center 0 !important;
     font: normal 400 0.75em "Roboto";
     color: #a0a0a0; }
 .layout__main .page2__main .questions__subtitle p a {
-    color: #2197ae; }
+    color: #0FBDDF; }
 .layout__main .page2__main .questions__subtitle p a:hover {
-    color: #2197ae;
+    color: #0FBDDF;
     text-decoration: underline; }
 @media screen and (max-width: 568px) {
     .layout__main .page2__main .questions__subtitle p {
@@ -6325,7 +6325,7 @@ background-position: center 0 !important;
     font-size: 14px;
     position: relative;
     top: -2px;
-    color: #0097ae;
+    color: #0FBDDF;
     -webkit-transform: rotate(90deg);
     -ms-transform: rotate(90deg);
     transform: rotate(90deg);
@@ -6364,7 +6364,7 @@ background-position: center 0 !important;
     color: #232323;
     padding: 10px 0 20px 26px; }
 .layout__main .page2__main .questions__list ul li div p a {
-    color: #2197ae; }
+    color: #0FBDDF; }
 .layout__main .page2__main .questions__list ul li div p a:hover {
     text-decoration: underline; }
 @media screen and (max-width: 568px) {
@@ -6520,7 +6520,7 @@ background-position: center 0 !important;
     -ms-transform: translate(0, 0);
     transform: translate(0, 0);
     content: "\f055";
-    color: #2197ae;
+    color: #0FBDDF;
     position: relative;
     font-size: 25px;
     /*@include to(tablet-h) {
@@ -6575,9 +6575,9 @@ background-position: center 0 !important;
     color: #000000;
     margin-bottom: 13px; }
 .layout__main .page2__main .considerations__data h3 a {
-    color: #0097ae; }
+    color: #0FBDDF; }
 .layout__main .page2__main .considerations__data h3 a:hover {
-    color: #0097ae;
+    color: #0FBDDF;
     text-decoration: underline; }
 .layout__main .page2__main .considerations__data h4 {
     font: normal 500 0.9375em "Roboto";
@@ -6590,9 +6590,9 @@ background-position: center 0 !important;
     font-weight: bold;
     margin-bottom: 14px; }
 .layout__main .page2__main .considerations__data p a {
-    color: #0097ae; }
+    color: #0FBDDF; }
 .layout__main .page2__main .considerations__data p a:hover {
-    color: #0097ae;
+    color: #0FBDDF;
     text-decoration: underline; }
 .layout__main .page2__main .considerations__data table {
     width: 96%;
@@ -6686,9 +6686,9 @@ background-position: center 0 !important;
     top: -2px;
     display: table-cell; }
 .layout__main .page2__main .considerations__data ul li a {
-    color: #0097ae; }
+    color: #0FBDDF; }
 .layout__main .page2__main .considerations__data ul li a:hover {
-    color: #0097ae;
+    color: #0FBDDF;
     text-decoration: underline; }
 .layout__main .page2__main .considerations__data ul li ul {
     padding-top: 10px; }
@@ -6925,7 +6925,7 @@ background-position: center 0 !important;
     font-weight: 300;
     color: #ffffff; }
 .layout__main .page3__header .section1__header .search .form__info p a {
-    color: #2197ae; }
+    color: #0FBDDF; }
 .layout__main .page3__header .section1__header .search .form__fields {
     position: relative; }
 .layout__main .page3__header .section1__header .search .form__fields:before {
@@ -6941,7 +6941,7 @@ background-position: center 0 !important;
     -ms-transform: translate(0, 0);
     transform: translate(0, 0);
     font-size: 22px;
-    color: #2197ae;
+    color: #0FBDDF;
     position: absolute;
     top: 12px;
     left: 24px; }
@@ -6965,7 +6965,7 @@ background-position: center 0 !important;
     font-size: 1.125em;
     color: #ffffff;
     text-align: center;
-    background-color: #0097ae;
+    background-color: #0FBDDF;
     padding: 10px 35px 10px 20px;
     border: none;
     display: table;
@@ -7213,7 +7213,7 @@ background-position: center 0 !important;
 .layout__main .page3__main .section1__main .links a {
     font-size: 1.125em;
     font-weight: 400;
-    color: #2197ae; }
+    color: #0FBDDF; }
 .layout__main .page3__main .section1__main .content__header {
     display: -webkit-box;
     display: -moz-box;
@@ -7390,9 +7390,9 @@ background-position: center 0 !important;
         padding: 0 0 8px 0;
     color: #4a4a4a; }
 .layout__main .page3__main .section1__main .content__header .info p a {
-    color: #2197ae; }
+    color: #0FBDDF; }
 .layout__main .page3__main .section1__main .content__header .info p a:hover {
-    color: #2197ae;
+    color: #0FBDDF;
     text-decoration: underline; }
 .layout__main .page3__main .section1__main .content__main {
     padding: 20px 0 60px 0;
@@ -7412,7 +7412,7 @@ background-position: center 0 !important;
     font-size: 1.125em;
     font-weight: 500;
     color: #ffffff;
-    background: #0097ae;
+    background: #0FBDDF;
     text-align: center;
     border:   none;
     padding: 18px 0px 18px 0px;
@@ -7436,7 +7436,7 @@ background-position: center 0 !important;
     .layout__main .page3__main .section1__main .content__main .buttons button:last-child {
         margin-bottom: 0; } }
 .layout__main .page3__main .section1__main .content__main .buttons button.button1 {
-    background-color: #0097ae;
+    background-color: #0FBDDF;
     /*&:before {
 												content: "\f105";
 								        @include icon(0px);
@@ -7451,9 +7451,9 @@ background-position: center 0 !important;
         margin-bottom: 20px; } }
 .layout__main .page3__main .section1__main .content__main .buttons button.button2 {
     background-color: #ffffff;
-    color: #0097ae; }
+    color: #0FBDDF; }
 .layout__main .page3__main .section1__main .content__main .buttons button:hover {
-    background-color: #0097ae;
+    background-color: #0FBDDF;
     color: white;
     -webkit-transition: all 0.2s ease 0s;
     -moz-transition: all 0.2s ease 0s;
@@ -7794,7 +7794,7 @@ background-position: center 0 !important;
     font-weight: 400;
     color: #000000; }
 .layout__main .page3__main .section2__main .info__list .element__info .content p a {
-    color: #2197ae; }
+    color: #0FBDDF; }
 @media screen and (max-width: 568px) {
     .layout__main .page3__main .section2__main .info__list .element__info .content p br {
         display: none; } }
@@ -7875,9 +7875,9 @@ background-position: center 0 !important;
     font: normal 400 0.75em "Roboto";
     color: #a0a0a0; }
 .layout__main .page3__main .questions__subtitle p a {
-    color: #2197ae; }
+    color: #0FBDDF; }
 .layout__main .page3__main .questions__subtitle p a:hover {
-    color: #2197ae;
+    color: #0FBDDF;
     text-decoration: underline; }
 @media screen and (max-width: 425px) {
     .layout__main .page3__main .questions__subtitle p {
@@ -7925,7 +7925,7 @@ background-position: center 0 !important;
     font-size: 14px;
     position: relative;
     top: -2px;
-    color: #0097ae;
+    color: #0FBDDF;
     -webkit-transform: rotate(90deg);
     -ms-transform: rotate(90deg);
     transform: rotate(90deg);
@@ -7964,7 +7964,7 @@ background-position: center 0 !important;
     color: #232323;
     padding: 10px 0 20px 26px; }
 .layout__main .page3__main .questions__list ul li div p a {
-    color: #2197ae; }
+    color: #0FBDDF; }
 .layout__main .page3__main .questions__list ul li div p a:hover {
     text-decoration: underline; }
 @media screen and (max-width: 425px) {
@@ -8120,7 +8120,7 @@ background-position: center 0 !important;
     -ms-transform: translate(0, 0);
     transform: translate(0, 0);
     content: "\f055";
-    color: #2197ae;
+    color: #0FBDDF;
     position: relative;
     font-size: 25px;
     /*@include to(tablet-h) {
@@ -8175,9 +8175,9 @@ background-position: center 0 !important;
     color: #000000;
     margin-bottom: 13px; }
 .layout__main .page3__main .considerations__data h3 a {
-    color: #0097ae; }
+    color: #0FBDDF; }
 .layout__main .page3__main .considerations__data h3 a:hover {
-    color: #0097ae;
+    color: #0FBDDF;
     text-decoration: underline; }
 .layout__main .page3__main .considerations__data h4 {
     font: normal 500 0.9375em "Roboto";
@@ -8190,9 +8190,9 @@ background-position: center 0 !important;
     font-weight: bold;
     margin-bottom: 14px; }
 .layout__main .page3__main .considerations__data p a {
-    color: #0097ae; }
+    color: #0FBDDF; }
 .layout__main .page3__main .considerations__data p a:hover {
-    color: #0097ae;
+    color: #0FBDDF;
     text-decoration: underline; }
 .layout__main .page3__main .considerations__data table {
     width: 96%;
@@ -8286,9 +8286,9 @@ background-position: center 0 !important;
     top: -2px;
     display: table-cell; }
 .layout__main .page3__main .considerations__data ul li a {
-    color: #0097ae; }
+    color: #0FBDDF; }
 .layout__main .page3__main .considerations__data ul li a:hover {
-    color: #0097ae;
+    color: #0FBDDF;
     text-decoration: underline; }
 .layout__main .page3__main .considerations__data ul li ul {
     padding-top: 10px; }
@@ -8349,7 +8349,7 @@ background-position: center 0 !important;
     color: #000000; }
 .layout__main .page4__main .section1__data .box__head .links a {
     font: normal 400 0.875em "Roboto";
-    color: #0097ae;
+    color: #0FBDDF;
     display: block; }
 .layout__main .page4__main .section1__data .box__head .links a:hover {
     text-decoration: underline; }
@@ -8758,7 +8758,7 @@ li.page-item {
     display: inline-block;
 }
 li.page-item.active {
-    background: #2197ae;
+    background: #0FBDDF;
     color: white;
     font-size: 1.5em;
     padding: 2px 4px;

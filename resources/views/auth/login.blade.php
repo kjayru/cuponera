@@ -35,7 +35,7 @@
                                         <div class="form__row1">
                                             <div class="form__info">
                                                 <h3>
-                                                   <strong>Bienvenido al club.</strong></h3>
+                                                   <strong>Bienvenido al club</strong></h3>
                                                 <p>Un mundo de beneficios <br> para <b>disfrutarlos al máximo.</b> </p>
                                             </div>
                                         </div>
@@ -96,7 +96,7 @@
 
                                         <div class="form__row3">
                                             <div class="form__buttons">
-                                                <button class="button1" type="submit">Enviar</button>
+                                                <button class="button1" type="submit">Ingresar</button>
                                             </div>
                                         </div>
                                     </form>
