@@ -3241,7 +3241,7 @@ background-position: center 0 !important;
 @media screen and (max-width: 568px) {
     .layout__header .section1__header {
         padding: 0 15px;
-        padding-top: 20px;  } }
+        padding-top: 10px;  } }
 .layout__header .section1__header .navigation {
     padding: 0;
     display: table-cell;
@@ -3397,7 +3397,7 @@ background-position: center 0 !important;
 @media screen and (max-width: 425px) {
     .layout__header .section1__header .sesion {
         position: absolute;
-        top: 20px;
+        top: 10px;
         right: 15px; } }
 .layout.access__user .layout__header .section1__header .sesion {
     display: block; }
@@ -4152,6 +4152,7 @@ background-position: center 0 !important;
     z-index: 2;
 }
 
+
 .layout__main .page1__header .section1__header .login .form dl dt select {
     width: 100%;
     padding: 0px 20px 0px 20px;
@@ -4160,6 +4161,8 @@ background-position: center 0 !important;
     appearance: none;
     -webkit-appearance: none;
     height: 42px;
+    position: relative;
+    z-index: 10;
     line-height: 42px; }
 .layout__main .page1__header .section1__header .login .form dl.row1 dt {
     display: table; }
@@ -4305,7 +4308,7 @@ background-position: center 0 !important;
 @media screen and (max-width: 768px) {
     .layout__main .page2__header .section1__header {
         width: 100%;
-        padding: 40px 0 40px; } }
+        padding: 90px 0 55px; } }
 @media screen and (max-width: 568px) {
     .layout__main .page2__header .section1__header {
         width: 100%;
@@ -4319,7 +4322,7 @@ background-position: center 0 !important;
     -moz-border-radius: 5px 5px 5px 5px;
     border-radius: 5px 5px 5px 5px; }
 .layout__main .page2__header .section1__header .search-category{
-    padding: 30px 0;
+    padding: 50px 0;
 }
 @media screen and (max-width: 768px) {
     .layout__main .page2__header .section1__header .search {
@@ -4374,7 +4377,11 @@ background-position: center 0 !important;
     margin-bottom: 10px; }
 @media screen and (max-width: 568px) {
     .layout__main .page2__header .section1__header .search .form__info h3 {
-        font-size: 1.375em; } }
+        font-size: 1.375em;
+        margin-top: 8px; }
+    .layout__main .page2__header .section1__header .search .form__info img{
+        width: 50px;
+        } }
 .layout__main .page2__header .section1__header .search .form__info h3 span {
     color: #da272c; }
 .layout__main .page2__header .section1__header .search .form__info p {
@@ -7078,10 +7085,10 @@ background-position: center 0 !important;
 .layout__main .page3__main .section1__align .category_detail {
     position: absolute;
     left: 0;
-    top: -34px;
-    padding: 0 10px;
-    min-width: 161px;
-    height: 68px;
+    top: -23px;
+    padding: 0 15px;
+    /*min-width: 161px;*/
+    height: 50px;
     background: #da272c;
     text-align: center;
     color: white;
@@ -7089,7 +7096,7 @@ background-position: center 0 !important;
     font: normal 400 0.9em "Roboto"; }
 
 .layout__main .page3__main .section1__align .category_detail span{
-    line-height: 68px;
+    line-height: 50px;
 }
 
 @media screen and (max-width: 1024px) {
@@ -7203,7 +7210,7 @@ background-position: center 0 !important;
     font-size: 1.375em;
     font-weight: 400; }
 .layout__main .page3__main .section1__main {
-    padding: 70px 0 0 0; }
+    padding: 55px 0 0 0; }
 .layout__main .page3__main .section1__main .links {
     padding: 0 0 30px 0; }
 @media screen and (max-width: 568px) {
@@ -7255,7 +7262,7 @@ background-position: center 0 !important;
     .layout__main .page3__main .section1__main .content__header .info {
         padding: 0 0 0 10px; }
     .layout__main .page3__main .section1__main{
-        padding: 50px 0 0 0 !important; }}
+        padding: 30px 0 0 0 !important; }}
 .layout__main .page3__main .section1__main .content__header .info h3 {
     font-size: 2em;
     padding-bottom: 33px;
@@ -8807,6 +8814,9 @@ li.page-item.active {
         display: none;
     }
     .layout__header .section1__header .navigation{
+        display: none;
+    }
+    .layout__header .section1__header .sesion button.exit{
         display: none;
     }
     body {

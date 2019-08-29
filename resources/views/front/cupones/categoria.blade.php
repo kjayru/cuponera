@@ -1,15 +1,41 @@
 @extends('layouts.front.app')
 @section('content')
+
 <div class="layout" id="app">
 
     <div class="layout__header">
         <div class="section1">
             <div class="section1__align">
-                <div class="section1__header">                       
+                <div class="section1__header">
+                    <!--
+                    <div class="navigation">
+                        <ul>
+                            <li> <a href="/cupones">Inicio</a></li>
+
+                        </ul>
+                    </div>-->
+                    @guest
+                    @else
+                    
+                    <div class="sesion">
+                       
+                      <button class="exit" 
+                         onclick="event.preventDefault();
+                             document.getElementById('logout-form').submit();">
+                         {{ __('Cerrar sesión') }}
+                    </button>
+                 
+                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                         @csrf
+                     </form>
+                    </div>
+                 @endguest
+
                 </div>
             </div>
         </div>
     </div>
+    
     <div class="layout__main">
         <div class="page2">
             <div class="page2__header">

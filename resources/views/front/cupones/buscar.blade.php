@@ -16,7 +16,7 @@
                         
                         @guest
                         @else
-                        <!--
+                        
                         <div class="sesion">
                            
                           <a class="dropdown-item exit exit_sesion" href="{{ route('logout') }}"
@@ -28,7 +28,7 @@
                          <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                              @csrf
                          </form>
-                        </div>-->
+                        </div>
                      @endguest
 
                     </div>

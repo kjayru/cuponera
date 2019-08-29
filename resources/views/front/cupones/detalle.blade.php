@@ -22,19 +22,19 @@
 
                     @guest
                     @else
-                    <!--
+                    
                     <div class="sesion">
                        
-                      <button class="exit" 
-                         onclick="event.preventDefault();
-                             document.getElementById('logout-form').submit();">
-                         {{ __('Cerrar sesión') }}
-                    </button>
-                 
-                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                         @csrf
+                          <button class="exit" 
+                             onclick="event.preventDefault();
+                                 document.getElementById('logout-form').submit();">
+                             {{ __('Cerrar sesión') }}
+                        </button>
+                     
+                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                             @csrf
                      </form>
-                    </div> -->
+                    </div> 
                  @endguest
                 </div>
             </div>
