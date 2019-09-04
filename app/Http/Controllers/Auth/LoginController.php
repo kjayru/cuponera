@@ -50,7 +50,7 @@ class LoginController extends Controller
 
     public function showLoginForm()
     {
-        $departamentos = CupDepartamento::all();
+        $departamentos = CupDepartamento::orderBy('dep_nombre','asc')->get();
         return view('auth.login',['departamentos'=>$departamentos]);
     }
 

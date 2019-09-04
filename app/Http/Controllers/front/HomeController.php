@@ -93,7 +93,7 @@ class HomeController extends Controller
         $cat_id = $categoria->cat_id;
         $nombre = $categoria->cat_nombre;
 
-        $cupones = DB::table('cup_cupones')->where('cat_id',$cat_id)->where('cup_estado','1')->paginate(9);
+        $cupones = CupCupon::where('cat_id',$cat_id)->where('cup_estado','1')->paginate(9);
       
         
         $url_slug = $_SERVER['REQUEST_URI'];
