@@ -12,7 +12,10 @@
 
                     <div class="navigation">
                         <ul>
-                            <li> <a href="/cupones"> < Volver</a></li>
+                            <li> <a href="/cupones">
+                                    <img  src="{{ url('assets/volver.svg')}}" alt="" />
+                                </a>
+                            </li>
                             <!--<li>/</li>
                             <li><a href="/cupones/{{$categoria}}">{{ \Illuminate\Support\Str::title($cupon->cupcategoria->cat_nombre) }}</a></li>
                             <li>/</li>

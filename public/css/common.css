@@ -3228,6 +3228,37 @@ background-position: center 0 !important;
 }
 
 
+#bg-image {
+  width: 100%;
+  height: 350px;
+  background: url("../assets/Cuponera-Banner Buscador-1920x309.jpg") no-repeat center center;
+  background-size: cover;
+  position: relative;
+  display: block; }
+  @media screen and (max-width: 1366px) {
+    #bg-image {
+      background: url("../assets/Cuponera-Banner Buscador-1440x309.jpg") no-repeat center center;
+      background-size: cover; } }
+  @media screen and (max-width: 1024px) {
+    #bg-image {
+      background: url("../assets/Cuponera-Banner Buscador-1024x309.jpg") no-repeat center top;
+      background-size: cover;} }
+  @media screen and (max-width: 768px) {
+    #bg-image {
+      background: url("../assets/Cuponera-Banner Buscador-750x309.jpg") no-repeat center center;
+      height: 390px;
+      background-size: cover;} }
+/*  @media screen and (max-width: 640px) {
+    #bg-image {
+      background: url("../assets/Banner_Landing_Marc_Anthony_570x190.jpg") no-repeat center center;
+      height: 190px; } }*/
+  @media screen and (max-width: 480px) {
+    #bg-image {
+      background: url("../assets/Cuponera-Banner Buscador-470-309.jpg") no-repeat center center;
+      background-size: cover;
+      height: 250px; } }
+
+
 
 .layout__header .section1__align {
     max-width: 1260px;
@@ -3249,7 +3280,7 @@ background-position: center 0 !important;
           @include to(movil) {
             display: none;
           }*/ }
-.layout__header .section1__header .navigation ul li {
+/*.layout__header .section1__header .navigation ul li {
     font-size: 1.12em;
     width: 118px;
     height: 35px;
@@ -3258,11 +3289,12 @@ background-position: center 0 !important;
     border-radius: 20px;
     cursor: pointer;
     background: #0FBDDF; }
-
+*/
 
  .layout__header .section1__header .navigation ul li a{
     color: #ffffff;
-    line-height: 35px;
+    display: inline-block;
+    /*line-height: 35px;*/
  }   
 
 

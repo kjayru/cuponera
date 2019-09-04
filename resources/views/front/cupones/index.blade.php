@@ -38,7 +38,7 @@
 
     <div class="layout__main">
         <div class="page2">
-            <div class="page2__header">
+            <div class="page2__header " id="bg-image">
                 <section class="section1">
                     <div class="section1__align">
                         <div class="section1__header">
