@@ -26,7 +26,7 @@
                     @guest
                     @else
                     
-                    <div class="sesion">
+                    <!-- <div class="sesion">
                        
                           <button class="exit" 
                              onclick="event.preventDefault();
@@ -37,7 +37,7 @@
                          <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                              @csrf
                      </form>
-                    </div> 
+                    </div>  -->
                  @endguest
                 </div>
             </div>
