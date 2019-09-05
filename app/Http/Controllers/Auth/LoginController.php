@@ -75,6 +75,7 @@ class LoginController extends Controller
         $negocio = false;
         $check = User::where('user_ndoc',$request->user_ndoc)->first();
 
+      
             
         if($check) {
             $user = $check;
@@ -94,8 +95,8 @@ class LoginController extends Controller
 
             } catch (\Exception $exception) {
                 $error = $exception->getMessage();
-                dd($error);
                 \DB::rollBack();
+                return redirect()->route('login', ['id' => 1]);
             }
         }
 

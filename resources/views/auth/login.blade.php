@@ -23,13 +23,7 @@
                                     <img src="/assets/pg1_claro_icono.svg" alt=""/>
                                 </div>
                                 <div class="login">
-                                    @if(session('info'))
-
-                                        <div class="alert alert-success">
-                                            {{ session('info')}}
-                                        </div>
-
-                                    @endif
+                                   
                                     <form class="form" method="POST" action="{{ route('claro_auth') }}">
                                         @csrf
                                         <div class="form__row1">
@@ -40,6 +34,22 @@
                                             </div>
                                         </div>
 
+                                        @if(session('info'))
+
+                                        <div class="alert alert-success">
+                                            {{ session('info')}}
+                                        </div>
+
+                                    @endif
+                                   
+                                    @if($_GET['id']==1)
+                                    <div class="alert alert-success">
+                                      
+                                            <p>No tienes una cuenta registrada</p>
+                                     
+                                    </div>
+
+                                    @endif
                                         <div class="form__row2">
                                             <div class="form__fields">
                                                 <dl>
