@@ -42,7 +42,7 @@
 
                                     @endif
                                    
-                                    @if($_GET['id']==1)
+                                    @if(@$_GET['id']==1)
                                     <div class="alert alert-success">
                                       
                                             <p>No tienes una cuenta registrada</p>
