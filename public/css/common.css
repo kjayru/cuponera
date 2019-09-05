@@ -3411,18 +3411,17 @@ background-position: center 0 !important;
     text-align: right; }
 
 .layout__header .section1__header .sesion .exit_sesion {
-    font-size: 1.12em;
+    font-size: 1em;
     color: #ffffff;
     font-weight: 500;
     text-align: center;
-    width: 181px;
+    width: 125px;
     height: 35px;
     line-height: 35px;
-    display: inline-block;
     border-radius: 20px;
-    border: 1px solid white;
+    border: none !important;
     cursor: pointer;
-        background: #e60507;
+    background: #e60507;
 }
 
 
@@ -3434,18 +3433,17 @@ background-position: center 0 !important;
 .layout.access__user .layout__header .section1__header .sesion {
     display: block; }
 .layout__header .section1__header .sesion button {
-    font-size: 1.12em;
-    font-weight: 400;
+    font-size: 1em;
     color: #ffffff;
     font-weight: 500;
     text-align: center;
-    width: 181px;
+    width: 125px;
     height: 35px;
     line-height: 35px;
     border-radius: 20px;
-    border: 1px solid white;
+    border: none !important;
     cursor: pointer;
-        background: #e60507; }
+    background: #e60507; }
 @media screen and (max-width: 425px) {
     .layout__header .section1__header .sesion button {
         font-size: 0.9375em; } }
