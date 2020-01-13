@@ -49,6 +49,7 @@ var main = (function(APP, win, $, undefined) {
 
   var medida = (screen.width) 
   console.log(medida , rute)
+  
 
 
 
