@@ -61,15 +61,30 @@ var main = (function(APP, win, $, undefined) {
     
       columnasDesktop = columnasMobile
 
-      if (rute.includes('cupones/')) {
+      if (rute.includes('buscar?')) {
       head_movil_claro.classList.add('notactive')
       app_.setAttribute('class' , 'layout')
-    } else if (rute.includes('buscar?')) {
+    }  else if (rute.includes('http://cuponera.claro.com.pe/')) {
       head_movil_claro.classList.add('notactive')
       app_.setAttribute('class' , 'layout')
-    }
 
 
+    } 
+
+
+    if (rute.includes('http://cuponera.claro.com.pe/cupones')) {
+      head_movil_claro.classList.remove('notactive')
+      app_.setAttribute('class' , 'layout index_donwload')
+    } 
+
+    if (rute.includes('http://cuponera.claro.com.pe/cupones/')) {
+      head_movil_claro.classList.add('notactive')
+      app_.setAttribute('class' , 'layout')
+    } 
+
+
+
+    
   }
   
   if(rute.includes('buscar')) {
