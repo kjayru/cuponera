@@ -3201,7 +3201,9 @@ html.fp-enabled,
     padding: 90px 0 0 0; }
 @media screen and (max-width: 425px) {
     .layout {
-        padding: 50px 0 0 0; } }
+        padding: 50px 0 0 0; }
+    .layout.index_donwload{
+        padding: 144px 0 0 0; } }
 .layout.session__header .section1__header .sesion {
     display: block; }
 .layout__header {

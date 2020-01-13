@@ -1,7 +1,7 @@
 @extends('layouts.front.app')
 @section('content')
 
-<div class="layout" id="app">
+<div class="layout index_donwload" id="app">
 
     <div class="layout__header">
         <div class="section1">

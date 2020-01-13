@@ -8,10 +8,16 @@
 
     <script type="text/javascript" src="{{ asset('js/library/jquery.js')}}"></script>
     <link rel="stylesheet" type="text/css" href="/css/common.css?v={{uniqid()}}">
+    <link rel="stylesheet" type="text/css" href="/css/download.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.6/dist/jquery.fancybox.min.css">
-      <link href="https://fonts.googleapis.com/css?family=Anton|Bevan|Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Anton|Bevan|Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+    <script src="/js/mobile-detect.js"></script>
+
+
   </head>
   <body>
+
+
    @include('layouts.front.partials.header')
 
     
@@ -23,4 +29,8 @@
     
    @include('layouts.front.partials.scripts')
   </body>
+
+  <script src="/js/donwload.js"></script>
+
+
 </html>
