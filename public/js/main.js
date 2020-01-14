@@ -19,7 +19,8 @@ var main = (function(APP, win, $, undefined) {
 
   var mediaquery = win.matchMedia("(max-width: 426px)");
 
-
+  let head_movil_claro = document.getElementById('head_movil_claro')
+  let app_ = document.getElementById('app')
 
   
   //var first = false;
@@ -48,14 +49,43 @@ var main = (function(APP, win, $, undefined) {
 
   var medida = (screen.width) 
   console.log(medida , rute)
+  
+
+
+
+
+
+
+
 
   if (medida < 650) {
     
       columnasDesktop = columnasMobile
 
+      if (rute.includes('buscar?')) {
+      head_movil_claro.classList.add('notactive')
+      app_.setAttribute('class' , 'layout')
+    }  else if (rute.includes('http://cuponera.claro.com.pe/')) {
+      head_movil_claro.classList.add('notactive') 
+      app_.setAttribute('class' , 'layout')
+
+
+    } 
+
+
+    if (rute.includes('http://cuponera.claro.com.pe/cupones')) {
+      head_movil_claro.classList.remove('notactive')
+      app_.setAttribute('class' , 'layout index_donwload')
+    } 
+
+    if (rute.includes('http://cuponera.claro.com.pe/cupones/')) {
+      head_movil_claro.classList.add('notactive')
+      app_.setAttribute('class' , 'layout')
+    } 
 
 
 
+    
   }
   
   if(rute.includes('buscar')) {

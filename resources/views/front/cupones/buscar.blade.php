@@ -77,11 +77,13 @@
                                 </div>-->
                                 <div class="info">
                                     <div class="info__list" >
+
                                             @php $k=0; @endphp
                                     @if($cupones)
 
                                         @foreach($cupones->unique('cup_id') as $key => $cupon)
                                          @php $k++ @endphp
+
                                              <div class="element">
                                                  <a href="/cupones/{{$cupon->cupcategoria->cat_alias}}/{{$cupon->cup_id}}/{{ \Illuminate\Support\Str::slug($cupon->cup_titulo, '-') }}">
                                                     <div class="element__image">

@@ -1,6 +1,8 @@
 /node_modules
 /public/hot
 /public/storage
+/public/cms
+/public/img
 /storage/*.key
 /vendor
 /public/cms
@@ -11,3 +13,4 @@ Homestead.json
 Homestead.yaml
 npm-debug.log
 yarn-error.log
+public/cms
