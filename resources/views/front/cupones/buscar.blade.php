@@ -13,18 +13,18 @@
 
                             </ul>
                         </div>-->
-                        
+
                         @guest
                         @else
-                        
+
                         <div class="sesion">
-                           
+
                           <a class="dropdown-item exit exit_sesion" href="{{ route('logout') }}"
                              onclick="event.preventDefault();
                                  document.getElementById('logout-form').submit();">
                              {{ __('Cerrar sesión') }}
                          </a>
-                     
+
                          <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                              @csrf
                          </form>
@@ -35,7 +35,7 @@
                 </div>
             </div>
         </div>
-        
+
         <div class="layout__main">
             <div class="page2">
 
@@ -77,24 +77,27 @@
                                 </div>-->
                                 <div class="info">
                                     <div class="info__list" >
+                                            @php $k=0; @endphp
+                                    @if($cupones)
 
-                                        @foreach($cupones as $cupon)
-                                            
-                                             <div class="element"><a href="/cupones/{{$cupon->cupcategoria->cat_alias}}/{{$cupon->cup_id}}/{{ \Illuminate\Support\Str::slug($cupon->cup_titulo, '-') }}">
+                                        @foreach($cupones->unique('cup_id') as $key => $cupon)
+                                         @php $k++ @endphp
+                                             <div class="element">
+                                                 <a href="/cupones/{{$cupon->cupcategoria->cat_alias}}/{{$cupon->cup_id}}/{{ \Illuminate\Support\Str::slug($cupon->cup_titulo, '-') }}">
                                                     <div class="element__image">
-                                                        <!--<div class="logo"><img src="{{@$cupon->cupempresa->emp_logo}}" alt=""/></div>-->
+
                                                         <div class="image">
                                                         <img src="{{ @$cupon->cup_imagen }}" alt=""/></div>
 
                                                         <div class="content">
-                                                            
-                                                          
+
+
                                                             @switch($cupon->cupcategoria->cat_id)
                                                                 @case(3)
                                                                 <figure><img class="img_of" src="/assets/pg1_categoria6.svg" alt=""/>
                                                                 <img src="/assets/pg1_categoria6_on.svg" alt=""/></figure>
                                                                 @break
-                                                        
+
                                                             @case(5)
                                                                 <figure><img class="img_of" src="/assets/pg1_categoria3.svg" alt=""/>
                                                                 <img src="/assets/pg1_categoria3_on.svg" alt=""/></figure>
@@ -127,7 +130,7 @@
                                                             <figcaption>
                                                                 <h4>{{@$cupon->cupcategoria->cat_nombre}}</h4>
                                                                 <h3>{{@$cupon->cupempresa->emp_nombre}}</h3>
-                                                                <p> 
+                                                                <p>
                                                                     {{ \Illuminate\Support\Str::limit(strip_tags($cupon->cup_titulo ),75)}}
                                                                 </p>
                                                             </figcaption>
@@ -136,24 +139,29 @@
                                                     <!--
                                                     <div class="element__info">
                                                         <div class="content">
-                                                           
+
                                                         </div>
                                                     </div>-->
                                                 </a>
                                              </div>
-                                            
+
                                         @endforeach
-
-
+                                    @else
+                                            <div class="element">
+                                                <p>No existen resultados</p>
+                                            </div>
+                                    @endif
                                     </div>
 
                                     <div class="info__paginator">
-                                        {{ $cupones->onEachSide(1)->links() }}
+                                        @if($cupones)
+                                            {{ $cupones->onEachSide(1)->links() }}
+                                        @endif
                                     </div>
                                 </div>
 
                                 <div class="title">
-                                    <h5>Mostrando <span id="search_products"> {{ $resultados }} </span> resultados</h5>
+                                    <h5>Mostrando <span id="search_products"> {{ $k }} </span> resultados</h5>
                                 </div>
 
                                 <div class="without_products">
@@ -181,7 +189,7 @@
 
 
 
-                   
+
                 </div>
 
 

@@ -70,7 +70,7 @@
                                                 <dl class="{{ $errors->has('user_ndoc') ? ' is-invalid' : '' }}">
                                                     <dt class="content_input">
                                                         <!--<label class="form__label1">Número de DNI</label>-->
-                                                        <input class="form__text1" type="text" name="user_ndoc" placeholder="Número de DNI" required value="{{ old('user_ndoc') }}"/>
+                                                        <input class="form__text1" type="text" name="user_ndoc" placeholder="Número de documento" required value="{{ old('user_ndoc') }}"/>
                                                     </dt>
                                                     @if ($errors->has('user_ndoc'))
                                                     <dd><span class="error">{{ $errors->first('user_ndoc') }}</span></dd>
