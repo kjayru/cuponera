@@ -19,8 +19,8 @@ let app_ = document.getElementById('app')
         let hr = document.getElementById('detect')
 
         if(phone  === 'iPhone'){
-            let a = hr.setAttribute('href' , 'https://itunes.apple.com/pe/app/mi-claro-per%C3%BA/id785700933?mt=8')
+            let a = hr.setAttribute('href' , 'https://itunes.apple.com/pe/app/claro-club/id1343890516?mt=8')
         }
         if( android === 'AndroidOS'){
-            let a = hr.setAttribute('href' , 'https://play.google.com/store/apps/details?id=com.claro.pe.miclaro&amp;hl=es&quot; title=&quot;&quot; target=&quot;&quot; type=&quot;button&quot; class=&quot;btn btn-warning')
+            let a = hr.setAttribute('href' , 'https://play.google.com/store/apps/details?id=com.claro.claroclub')
         }

@@ -1,22 +1,17 @@
 
 
-
-
-
-
-
-
 <div class="top_layout">
 
     <section class="head_movil_claro" id="head_movil_claro">
     <div class="head_movil_align">
         <i id="close_head_movil" class="close">X</i>
 
-        <img src="https://mi.claro.com.pe/wps/wcm/connect/d6c0580c-6c17-44be-88f2-39cf6f9b917f/icono-app-miclaro.png?MOD=AJPERES&CACHEID=ROOTWORKSPACE-d6c0580c-6c17-44be-88f2-39cf6f9b917f-mJ8pbxG" height="50">
+        <!--<img src="https://mi.claro.com.pe/wps/wcm/connect/d6c0580c-6c17-44be-88f2-39cf6f9b917f/icono-app-miclaro.png?MOD=AJPERES&CACHEID=ROOTWORKSPACE-d6c0580c-6c17-44be-88f2-39cf6f9b917f-mJ8pbxG" height="50">-->
+        <img src="assets/icon_claroclub_hm_2.png" height="50">
+
         <p>
-            <strong>Nueva App Mi Claro</strong>
-            Compra megas, controla tu <br>
-            saldo y paga tu recibo¡
+            <strong>App Claro club</strong>
+            Descubre todos los beneficios exclusivos que tienes por ser parte del Club.
         </p>
         <a id="detect" href="" title="" target="_blank">Descargar</a>
     </div>
