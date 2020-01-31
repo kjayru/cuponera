@@ -66,10 +66,8 @@ var main = (function(APP, win, $, undefined) {
       head_movil_claro.classList.add('notactive')
       app_.setAttribute('class' , 'layout')
     }  else if (rute.includes('http://cuponera.claro.com.pe/')) {
-      head_movil_claro.classList.add('notactive') 
-      app_.setAttribute('class' , 'layout')
-
-
+      head_movil_claro.classList.remove('notactive')
+      app_.setAttribute('class' , 'layout index_donwload')
     } 
 
 
