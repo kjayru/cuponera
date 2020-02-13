@@ -16,6 +16,9 @@
                                             <ul>
                                                 <li class="usetype">Amazonas</li>
                                                 <li class="usetype">Ancash</li>
+
+                                                <li class="usetype">Apurimac</li>
+
                                                 <li class="usetype">Arequipa</li>
                                                 <li class="usetype">Ayacucho</li>
                                                 <li class="usetype">Cajamarca</li>
@@ -27,10 +30,29 @@
                                                 <li class="usetype">Lambayeque</li>
                                                 <li class="usetype">Lima</li>
                                                 <li class="usetype">Loreto</li>
+
+                                                <li class="usetype">Madre de Dios</li>
+                                                <li class="usetype">Moquegua</li>
+
+                                                <li class="usetype">Pasco </li>
+                                                <li class="usetype">Piura</li>
+                                                <li class="usetype">Puno</li>
+
+                                                
                                                 <li class="usetype">San Martín </li>
                                                 <li class="usetype">Tacna</li>
                                                 <li class="usetype">Tumbes</li>
                                                 <li class="usetype">Ucayali</li>
+
+
+                                                
+                                                <!-- <li class="usetype">Apurimac</li> -->
+                                                <!-- <li class="usetype">Madre de Dios</li>
+                                                <li class="usetype">Moquegua</li> -->
+                                                
+
+
+                                            
                                                 <!--li.usetype Lambayeque-->
                                                 <!--li.usetype Huánuco-->
                                             </ul>
